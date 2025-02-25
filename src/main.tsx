@@ -16,7 +16,6 @@ createRoot(document.getElementById("root")!).render(
           <Route index element={<Index />} />
         </Route>
       </Routes>
-      <Index />
     </BrowserRouter>
   </StrictMode>
 );
