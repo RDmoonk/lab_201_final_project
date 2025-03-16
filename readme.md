@@ -83,7 +83,7 @@ pnpm format
     ├── 🗋 main.tsx
     ├── 🗋 vite-env.d.ts
     ├── 🗁 components
-    │   └── 🗋 main-text.tsx
+    │   └── 🗋 example-component.tsx
     ├── 🗁 layouts
     │   └── 🗋 main-layout.tsx
     ├── 🗁 lib
