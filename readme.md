@@ -70,6 +70,7 @@ pnpm format
 ├── 🗋 eslint.config.js
 ├── 🗋 index.html
 ├── 🗋 package.json
+├── 🗋 pnpm-lock.yaml
 ├── 🗋 readme.md
 ├── 🗋 tsconfig.app.json
 ├── 🗋 tsconfig.json
@@ -81,11 +82,12 @@ pnpm format
     ├── 🗋 index.css
     ├── 🗋 main.tsx
     ├── 🗋 vite-env.d.ts
+    ├── 🗁 components
+    │   └── 🗋 main-text.tsx
     ├── 🗁 layouts
     │   └── 🗋 main-layout.tsx
     ├── 🗁 lib
     │   └── 🗋 utils.ts
     └── 🗁 pages
         └── 🗋 index.tsx
-
 ```
