@@ -15,8 +15,8 @@ A minimal and customizable React starter template to kickstart your projects wit
 
 ### Prerequisites
 
-- [Node JS][https://nodejs.org/]
-- [pnpm][https://pnpm.io/]
+- [Node JS](https://nodejs.org/)
+- [pnpm](https://pnpm.io/)
 
 ### Installation
 
