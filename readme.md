@@ -3,6 +3,7 @@
 A minimal and customizable React starter template to kickstart your projects with best practices.
 
 ## Features
+
 - Vite - Fast build and development environment
 - React - Modern UI library for building interactive user interfaces
 - TypeScript - Stringly typed for better development experience
@@ -13,18 +14,21 @@ A minimal and customizable React starter template to kickstart your projects wit
 ## Getting started
 
 ### Prerequisites
+
 - [Node JS][https://nodejs.org/]
 - [pnpm][https://pnpm.io/]
 
 ### Installation
 
 #### Clone the repository
+
 ```sh
 git clone https://github.com/martin-dinahet/react-quickstart.git
 cd react-quickstart
 ```
 
 #### Install dependencies
+
 ```sh
 pnpm install
 ```
@@ -32,12 +36,15 @@ pnpm install
 #### Development
 
 Start the development server
+
 ```sh
 pnpm dev
 ```
+
 Then, open [localhost:5173][http://localhost:5173] in your browser.
 
 #### Build for production
+
 ```sh
 pnpm build
 ```
@@ -45,15 +52,19 @@ pnpm build
 #### Linting & Formatting
 
 Run ESLint to check linting errors:
+
 ```sh
 pnpm lint
 ```
+
 Format code with Prettier:
+
 ```sh
 pnpm format
 ```
 
 ## Directory structure
+
 ```
 🗁 .
 ├── 🗋 eslint.config.js
