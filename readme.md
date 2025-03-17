@@ -41,7 +41,7 @@ Start the development server
 pnpm dev
 ```
 
-Then, open [localhost:5173][http://localhost:5173] in your browser.
+Then, open [localhost:5173](http://localhost:5173) in your browser.
 
 #### Build for production
 
