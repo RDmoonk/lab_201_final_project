@@ -1,6 +1,6 @@
 import React from "react";
 
-export const MainText: React.FC = () => {
+export const ExampleComponent: React.FC = () => {
   return (
     <>
       <h1>Hello, World!</h1>
