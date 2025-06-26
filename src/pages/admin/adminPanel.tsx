@@ -1,22 +1,9 @@
-import { useEffect, useState } from 'react';
-import {
-  getAuth,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-  signOut,
-  User
-} from 'firebase/auth';
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  getDocs,
-  deleteDoc,
-  doc,
-  Timestamp
+import { useState } from 'react';
+import {getAuth,signOut} from 'firebase/auth';
+import {getFirestore,collection,addDoc,getDocs,deleteDoc,doc,Timestamp
 } from 'firebase/firestore';
 import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '../firebase/firebase-config';
+import { firebaseConfig } from '../../firebase/firebase-config';
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -32,38 +19,11 @@ type DateTournee = {
 };
 
 export default function AdminPanel() {
-  const [user, setUser] = useState<User | null>(null);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [dates, setDates] = useState<DateTournee[]>([]);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (u) => {
-      setUser(u);
-      if (u) {
-        await loadDates();
-      }
-    });
-
-    // Sign out on page unload
-    return () => {
-      auth.signOut();
-      unsubscribe();
-    };
-  }, []);
-
-  const login = async () => {
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      alert('Connecté avec succès');
-    } catch (e: any) {
-      alert('Erreur : ' + e.message);
-    }
-  };
 
   const logout = async () => {
     await signOut(auth);
-    setUser(null);
     setDates([]);
   };
 
@@ -98,25 +58,6 @@ export default function AdminPanel() {
   };
 
   return (
-    <div>
-      <h1>Connexion Admin</h1>
-      {!user ? (
-        <div>
-          <input
-            type="email"
-            placeholder="Email admin"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Mot de passe"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button onClick={login}>Se connecter</button>
-        </div>
-      ) : (
         <div>
           <h2>Ajouter une date de tournée</h2>
           <form onSubmit={handleSubmit}>
@@ -145,7 +86,5 @@ export default function AdminPanel() {
             <button onClick={logout}>Se déconnecter</button>
           </div>
         </div>
-      )}
-    </div>
   );
 }
