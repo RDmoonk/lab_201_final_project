@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Fichiers de config secrets
+firebase-config.js
+.env
