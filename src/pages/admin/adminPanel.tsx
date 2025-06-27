@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import {getAuth,signOut} from 'firebase/auth';
-import {getFirestore,collection,addDoc,getDocs,deleteDoc,doc,Timestamp
-} from 'firebase/firestore';
+import { getAuth, signOut } from 'firebase/auth';
+import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, Timestamp } from 'firebase/firestore';
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '../../firebase/firebase-config';
 
@@ -20,7 +19,6 @@ type DateTournee = {
 
 export default function AdminPanel() {
   const [dates, setDates] = useState<DateTournee[]>([]);
-
 
   const logout = async () => {
     await signOut(auth);
@@ -58,33 +56,47 @@ export default function AdminPanel() {
   };
 
   return (
-        <div>
-          <h2>Ajouter une date de tournée</h2>
-          <form onSubmit={handleSubmit}>
-            <input type="date" name="date" required />
-            <input type="text" name="ville" placeholder="Ville" required />
-            <input type="text" name="pays" placeholder="Pays" required />
-            <input type="text" name="lieu" placeholder="Lieu / Festival" required />
-            <label>
-              <input type="checkbox" name="soldout" /> Sold Out ?
-            </label>
-            <button type="submit">Ajouter</button>
-          </form>
+    <div className="max-w-3xl mx-auto p-6">
+      <h2 className="text-2xl font-bold mb-4">Ajouter une date de tournée</h2>
+      <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4 mb-8">
+        <input type="date" name="date" required className="border border-gray-300 rounded p-2" />
+        <input type="text" name="ville" placeholder="Ville" required className="border border-gray-300 rounded p-2" />
+        <input type="text" name="pays" placeholder="Pays" required className="border border-gray-300 rounded p-2" />
+        <input type="text" name="lieu" placeholder="Lieu / Festival" required className="border border-gray-300 rounded p-2" />
+        <label className="flex items-center gap-2">
+          <input type="checkbox" name="soldout" className="accent-red-500" /> Sold Out ?
+        </label>
+        <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          Ajouter
+        </button>
+      </form>
 
-          <h2>Dates existantes</h2>
-          <ul>
-            {dates.map((d) => (
-              <li key={d.id}>
-                {d.date.toDate().toLocaleDateString()} - {d.ville}, {d.pays} (
-                {d.lieu}) {d.soldout ? '[Sold Out]' : ''}
-                <button onClick={() => d.id && handleDelete(d.id)}>Supprimer</button>
-              </li>
-            ))}
-          </ul>
+      <h2 className="text-xl font-semibold mb-2">Dates existantes</h2>
+      <ul className="space-y-2 mb-6">
+        {dates.map((d) => (
+          <li key={d.id} className="flex justify-between items-center bg-gray-100 p-3 rounded shadow-sm">
+            <span>
+              {d.date.toDate().toLocaleDateString()} - {d.ville}, {d.pays} ({d.lieu}){' '}
+              {d.soldout && <span className="text-red-600 font-semibold">[Sold Out]</span>}
+            </span>
+            <button
+              onClick={() => d.id && handleDelete(d.id)}
+              className="text-sm bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+            >
+              Supprimer
+            </button>
+          </li>
+        ))}
+      </ul>
 
-          <div>
-            <button onClick={logout}>Se déconnecter</button>
-          </div>
-        </div>
+      <div className="text-center">
+        <button
+          onClick={logout}
+          className="bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700"
+        >
+          Se déconnecter
+        </button>
+      </div>
+    </div>
   );
 }

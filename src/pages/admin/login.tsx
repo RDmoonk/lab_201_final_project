@@ -1,4 +1,4 @@
-import {useState } from 'react';
+import {useState, ChangeEvent } from 'react';
 import {getAuth,signInWithEmailAndPassword} from 'firebase/auth';
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '../../firebase/firebase-config';
@@ -9,8 +9,8 @@ const auth = getAuth(app);
 
 
 export default function AdminLogin() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
   const navigate = useNavigate();
 
 
@@ -24,6 +24,42 @@ export default function AdminLogin() {
     }
   };
 
+  
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
+  // const login = async () => {
+  //   try{
+  //     const userCredential = await signInWithEmailAndPassword(auth, email, password);
+  //     const user = userCredential.user;
+  //     console.log(user)
+
+  //     // verifie que l'admin est connecté
+  //     if(!user) throw new Error("User not found");
+
+  //     const idTokenResult = await user.getIdTokenResult();
+
+  //     if (idTokenResult.claims.admin === true){
+  //       setTimeout(() =>{
+  //           navigate('/AdminPanel');
+  //       }, 500)
+  //     } else {
+  //       alert("Vous n'êtes pas un administrateur.");
+  //     }
+  //   } catch (e: unknown){
+  //     if(e instanceof Error){
+  //       alert('Erreur:' + e.message);
+  //     } else {
+  //       alert('An error has occurer');
+  //     }
+  //   }
+  // }
+
 
 
 
@@ -35,13 +71,13 @@ export default function AdminLogin() {
             type="email"
             placeholder="Email admin"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+               onChange={handleEmailChange}
           />
           <input
             type="password"
             placeholder="Mot de passe"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+             onChange={handlePasswordChange}
           />
           <button onClick={login}>Se connecter</button>
         </div>
