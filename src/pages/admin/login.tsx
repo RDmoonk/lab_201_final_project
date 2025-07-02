@@ -1,86 +1,76 @@
-import {useState, ChangeEvent } from 'react';
-import {getAuth,signInWithEmailAndPassword} from 'firebase/auth';
-import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from '../../firebase/firebase-config';
-import { useNavigate } from 'react-router-dom';
+import { useState, ChangeEvent } from "react"
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth"
+import { initializeApp } from "firebase/app"
+import { firebaseConfig } from "../../firebase/firebase-config"
+import { useNavigate } from "react-router-dom"
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Card, CardContent } from "@/components/ui/card"
+import { Label } from "@/components/ui/label"
 
+const app = initializeApp(firebaseConfig)
+const auth = getAuth(app)
 
 export default function AdminLogin() {
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-  const navigate = useNavigate();
-
-
+  const [email, setEmail] = useState<string>("")
+  const [password, setPassword] = useState<string>("")
+  const navigate = useNavigate()
 
   const login = async () => {
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-    navigate('/AdminPanel')
+      await signInWithEmailAndPassword(auth, email, password)
+      navigate("/adminHome")
     } catch (e: any) {
-      alert('Erreur : ' + e.message);
+      alert("Erreur : " + e.message)
     }
-  };
+  }
 
-  
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  };
+    setEmail(e.target.value)
+  }
 
   const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-  };
-
-  // const login = async () => {
-  //   try{
-  //     const userCredential = await signInWithEmailAndPassword(auth, email, password);
-  //     const user = userCredential.user;
-  //     console.log(user)
-
-  //     // verifie que l'admin est connecté
-  //     if(!user) throw new Error("User not found");
-
-  //     const idTokenResult = await user.getIdTokenResult();
-
-  //     if (idTokenResult.claims.admin === true){
-  //       setTimeout(() =>{
-  //           navigate('/AdminPanel');
-  //       }, 500)
-  //     } else {
-  //       alert("Vous n'êtes pas un administrateur.");
-  //     }
-  //   } catch (e: unknown){
-  //     if(e instanceof Error){
-  //       alert('Erreur:' + e.message);
-  //     } else {
-  //       alert('An error has occurer');
-  //     }
-  //   }
-  // }
-
-
-
+    setPassword(e.target.value)
+  }
 
   return (
-    <div>
-      <h1>Connexion Admin</h1>
-        <div>
-          <input
-            type="email"
-            placeholder="Email admin"
-            value={email}
-               onChange={handleEmailChange}
-          />
-          <input
-            type="password"
-            placeholder="Mot de passe"
-            value={password}
-             onChange={handlePasswordChange}
-          />
-          <button onClick={login}>Se connecter</button>
-        </div>
+    <div className="min-h-screen bg-muted">
+      {/* Header */}
+      <header className="sticky top-0 bg-white shadow-md border-b p-4 z-10">
+        <h1 className="text-xl font-semibold text-center">Admin Login</h1>
+      </header>
+
+      {/* Main Content */}
+      <main className="flex items-center justify-center px-4 py-10">
+        <Card className="w-full max-w-md">
+          <CardContent className="space-y-6 p-6">
+            <div className="space-y-2">
+              <Label htmlFor="email">Email admin</Label>
+              <Input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={handleEmailChange}
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="password">Mot de passe</Label>
+              <Input
+                type="password"
+                placeholder="Mot de passe"
+                value={password}
+                onChange={handlePasswordChange}
+              />
+            </div>
+
+            <Button className="w-full" onClick={login}>
+              Se connecter
+            </Button>
+          </CardContent>
+        </Card>
+      </main>
     </div>
-  );
+  )
 }

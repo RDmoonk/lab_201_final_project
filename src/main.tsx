@@ -12,6 +12,7 @@ import AdminLogin from "./pages/admin/login";
 import AdminPanel from "./pages/admin/adminPanel";
 import { ProtectedLayout } from "./layouts/protected-layout";
 import { AuthProvider } from "./contexte/authContext";
+import AdminHome from "./pages/admin/adminHomePage";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -24,6 +25,9 @@ createRoot(document.getElementById("root")!).render(
           {/*admin panel à protéger  */}
              <Route element={<ProtectedLayout/>}>
          <Route path="AdminPanel" element={<AdminPanel/>}/>
+        </Route>
+        <Route element={<ProtectedLayout/>} >
+        <Route path="adminHome" element={<AdminHome/>}/>
         </Route>
         </Route>
       </Routes>
