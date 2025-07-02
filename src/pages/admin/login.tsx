@@ -37,8 +37,14 @@ export default function AdminLogin() {
   return (
     <div className="min-h-screen bg-muted">
       {/* Header */}
-      <header className="sticky top-0 bg-white shadow-md border-b p-4 z-10">
-        <h1 className="text-xl font-semibold text-center">Admin Login</h1>
+       <header className="sticky top-0 bg-white shadow-md z-10 border-b">
+        <div className="flex items-center justify-between max-w-6xl mx-auto p-4">
+          <Button variant="ghost" onClick={() => navigate("/")}>
+            ← Retour
+          </Button>
+          <h1 className="text-xl font-semibold">Admin Login</h1>
+          <div />
+        </div>
       </header>
 
       {/* Main Content */}

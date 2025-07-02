@@ -70,11 +70,6 @@ export default function AdminPanel() {
     await loadDates()
   }
 
-  // const logout = async () => {
-  //   await signOut(auth)
-  //   navigate("/AdminLogin")
-  // }
-
   return (
     <div className="min-h-screen bg-muted">
       {/* Header */}
@@ -139,12 +134,6 @@ export default function AdminPanel() {
             ))}
           </div>
         </section>
-
-        {/* <div className="text-center pt-6">
-          <Button variant="outline" onClick={logout}>
-            Se déconnecter
-          </Button>
-        </div> */}
       </main>
     </div>
   )
