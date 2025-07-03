@@ -17,9 +17,12 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
+import { signOut, getAuth, } from "firebase/auth"
 
 const app = initializeApp(firebaseConfig)
+const auth = getAuth(app)
 const db = getFirestore(app)
+
 
 type DateTournee = {
   id?: string
@@ -70,6 +73,11 @@ export default function AdminPanel() {
     await loadDates()
   }
 
+      const logout = async () => {
+        await signOut(auth)
+        navigate("/AdminLogin")
+      }
+
   return (
     <div className="min-h-screen bg-muted">
       {/* Header */}
@@ -80,6 +88,9 @@ export default function AdminPanel() {
           </Button>
           <h1 className="text-xl font-semibold">Admin Panel / Form</h1>
           <div />
+            <Button variant="outline" onClick={logout}>
+            Se déconnecter
+          </Button>
         </div>
       </header>
 

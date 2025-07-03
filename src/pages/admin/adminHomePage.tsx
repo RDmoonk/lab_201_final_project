@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+// import { Card, CardContent } from "@/components/ui/card"
 import { useNavigate } from "react-router-dom"
 import { signOut, getAuth, } from "firebase/auth"
 import { firebaseConfig } from "@/firebase/firebase-config"
@@ -23,7 +23,10 @@ export default function AdminHome() {
       {/* Simple Header */}
       <header className="bg-white border-b shadow-sm sticky top-0 z-50 w-full">
         <div className="max-w-6xl mx-auto px-4 py-4">
-          <h1 className="text-xl font-semibold text-gray-800">Admin Home</h1>
+          <h1 className="text-xl font-semibold text-gray-800">Aesop Rock Page Admin</h1>
+                <Button variant="outline" onClick={logout}>
+            Se déconnecter
+          </Button>
         </div>
       </header>
 
@@ -32,26 +35,9 @@ export default function AdminHome() {
         <h2 className="text-2xl md:text-4xl font-bold mb-6 text-center">
           Bienvenue, Administrateur
         </h2>
+                
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          <Card className="shadow-md hover:shadow-lg transition">
-            <CardContent className="p-6 flex flex-col items-start justify-between h-full">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Créer une nouvelle visite</h3>
-                <p className="text-gray-600 mb-4">
-                  Accédez au formulaire pour ajouter une nouvelle visite guidée.
-                </p>
-              </div>
-              <Button onClick={() => navigate("/AdminPanel")}>Créer une visite</Button>
-            </CardContent>
-          </Card>
-
-         <div className="text-center pt-6">
-          <Button variant="outline" onClick={logout}>
-            Se déconnecter
-          </Button>
-        </div>
-        </div>
+        <Button onClick={() => navigate("/AdminPanel")}>Créer une date</Button>
       </main>
     </div>
   )
