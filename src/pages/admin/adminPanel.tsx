@@ -1,21 +1,12 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  getDocs,
-  deleteDoc,
-  doc,
-  Timestamp,
-} from "firebase/firestore"
+import {getFirestore,collection,addDoc,getDocs,Timestamp,} from "firebase/firestore"
 import { initializeApp } from "firebase/app"
 import { firebaseConfig } from "@/firebase/firebase-config"
-
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Card, CardContent } from "@/components/ui/card"
+// import { Card, CardContent } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
 import { signOut, getAuth, } from "firebase/auth"
 
@@ -34,7 +25,7 @@ type DateTournee = {
 }
 
 export default function AdminPanel() {
-  const [dates, setDates] = useState<DateTournee[]>([])
+
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -48,7 +39,6 @@ export default function AdminPanel() {
       const data = docSnap.data()
       loadedDates.push({ id: docSnap.id, ...data } as DateTournee)
     })
-    setDates(loadedDates)
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -66,12 +56,10 @@ export default function AdminPanel() {
 
     form.reset()
     await loadDates()
+    navigate("/adminHome")
   }
 
-  const handleDelete = async (id: string) => {
-    await deleteDoc(doc(db, "dates_tournee", id))
-    await loadDates()
-  }
+
 
       const logout = async () => {
         await signOut(auth)
@@ -119,32 +107,11 @@ export default function AdminPanel() {
               <Checkbox name="soldout" />
               <Label htmlFor="soldout">Sold Out ?</Label>
             </div>
-            <Button type="submit">Ajouter la date</Button>
+            <Button type="submit"  >Ajouter la date</Button>
           </form>
         </section>
 
-        <section>
-          <h2 className="text-xl font-semibold mb-4">Dates existantes</h2>
-          <div className="space-y-4">
-            {dates.map((d) => (
-              <Card key={d.id}>
-                <CardContent className="flex flex-col md:flex-row md:items-center justify-between gap-2 p-4">
-                  <p className="text-sm">
-                    {d.date.toDate().toLocaleDateString()} — {d.ville}, {d.pays} ({d.lieu}){" "}
-                    {d.soldout && <span className="text-red-600 font-semibold">[Sold Out]</span>}
-                  </p>
-                  <Button
-                    variant="destructive"
-                    size="sm"
-                    onClick={() => d.id && handleDelete(d.id)}
-                  >
-                    Supprimer
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
+       
       </main>
     </div>
   )
