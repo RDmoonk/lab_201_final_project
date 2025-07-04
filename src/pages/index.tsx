@@ -2,6 +2,12 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import CarouselStyled from "@/components/carousel/carousel-aesop";
+// import FrontEndTournee from "@/components/carousel/front-end-tournee";
+import TourneeList from "@/components/tournee-list/tournee-list";
+
+
+
+
 
 const IndexPage: React.FC = () => {
   return (
@@ -53,10 +59,9 @@ const IndexPage: React.FC = () => {
     </section>
 
     <section className="tournee m-10">
-      <div className="tourneeTable">
         <h2 className="text-5xl font-bold rotate-3 p-5">Tournée </h2>
-      <div></div>
-      </div>
+
+    
       <Button>Passer à la caisse</Button>
     </section>
 
@@ -92,6 +97,7 @@ const IndexPage: React.FC = () => {
       <span className="sm:flex sm:flex-nowrap sm:m-20">
       <div className="pr-2">
         <h3>Tournée</h3>
+      <TourneeList/>
       </div>
 
       <div className="pr-2">
