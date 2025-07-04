@@ -56,7 +56,7 @@ export default function AdminPanel() {
 
     form.reset()
     await loadDates()
-    navigate("/adminHome")
+    navigate("/adminHome");
   }
 
 
