@@ -1,7 +1,7 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import CarouselStyled from "@/components/carousel/carousel-aesop";
+import CarouselStyled from "@/components/carousel/vinyle-carousel-aesop";
 // import FrontEndTournee from "@/components/carousel/front-end-tournee";
 import TourneeList from "@/components/tournee-list/tournee-list";
 
@@ -36,7 +36,9 @@ const IndexPage: React.FC = () => {
         Reprehenderit commodi, culpa nobis consequatur odio facilis praesentium porro rerum quos atque deleniti illum non laudantium doloribus vel nulla recusandae quas repellat autem temporibus esse nisi? Ut officia libero eaque?
         Enim, ullam iste doloribus provident deserunt doloremque facilis praesentium quos quibusdam, similique totam voluptates eaque veniam sed accusamus adipisci eius cumque, sint commodi saepe molestias. Soluta odit ducimus corporis in?
         Dicta sint quisquam beatae aspernatur odit officiis vero magni illo? Eos iusto amet itaque modi expedita placeat asperiores ducimus debitis iste corporis, voluptatibus accusamus, repellendus nam aut ad quam impedit!</p>
-           <img src="https://i.scdn.co/image/d190e645f63fb0430299aa85600afeeb432130e0" alt="" />
+        {/* <div className="">  */}
+           <img className="size-200" src="/src/img/aesop-rock-pic.jpg" alt="" />
+        {/* </div> */}
       </div >
     </section>
 

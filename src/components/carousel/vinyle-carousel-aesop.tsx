@@ -1,0 +1,60 @@
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card"
+// import { Button } from "../ui/button";
+import * as React from "react"
+import Autoplay from "embla-carousel-autoplay"
+
+
+export default function CarouselStyled() {
+
+  const imagePaths= [
+    "/src/img/album-cover-ar-1.jpg",
+    "/src/img/album-cover-ar-2.jpg",
+    "/src/img/album-cover-ar-3.jpg",
+    "/src/img/album-cover-ar-4.jpg",
+    "/src/img/album-cover-ar-5.jpg",
+    "/src/img/album-cover-ar-6.jpg"
+
+  ]
+
+    const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
+  
+    return(
+        <>
+    <section className="m-20 flex justify-center">
+      <div className="items-center">
+        <Carousel className="w-full max-w-sm"
+        plugins={[plugin.current]}
+        >
+          <CarouselContent className="-ml-1">
+            {imagePaths.map((src, index) => (
+              <CarouselItem key={index} className="pl-1 md:basis-1 lg:basis-1/2">
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="flex aspect-square items-center justify-center p-0 overflow-hidden">
+                      <img
+                        src={src}
+                        alt={`carousel-image-${index}`}
+                        className="object-cover w-full h-full"
+                      />
+                    </CardContent>
+                  </Card>    
+                </div>
+              </CarouselItem>
+              
+            ))}
+          </CarouselContent>
+          
+          <CarouselPrevious />
+          <CarouselNext />
+          <img src="/src/img/skate-for-carousel-removebg-preview.png" alt="" className=""/>
+        </Carousel>
+        
+      </div>
+      
+    </section>
+        </>
+    )
+}
