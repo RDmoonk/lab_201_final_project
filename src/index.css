@@ -1,5 +1,21 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url("./assets/fonts/Urban\ Starblues\ Demo.otf");
+
+@font-face {
+  font-family: 'Urban Starblues';
+  src: url('./assets/fonts/Urban-Starblues-Demo.otf') format('opentype');
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: 'Karantina-Bold';
+  src: url('./assets/fonts/Karantina-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-display: swap;
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -110,11 +126,30 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.font-urban{
+  font-family: 'Urban Starblues', sans-serif;
+
+}
+
+.font-karantina-bold{
+  font-family: 'Karantina-Bold', sans-serif;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
+
+    .font-urban{
+        font-family: 'Urban Starblues', sans-serif;
+    }
+
+    .font-karantina-bold{
+  font-family: 'karantina-bold', sans-serif;
+}
   }
   body {
     @apply bg-background text-foreground;
   }
+
+  
 }

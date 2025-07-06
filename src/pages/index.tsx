@@ -12,25 +12,25 @@ import TourneeList from "@/components/tournee-list/tournee-list";
 const IndexPage: React.FC = () => {
   return (
     <>
-    <header className="bg-[url(https://www.xplaylist.cz/files/23626375093c129bacf52d29a11c658c.jpg)] bg-cover bg-center ">
+    <header className="bg-[url(/src/img/new-cover.jpg)] bg-cover bg-center ">
     <nav className="flex flex-nowrap justify-center">
       <a href="" className=" text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Histoire</a>
       <a href="" className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Tour</a>
-      <a href="" className=""> <img className="size-40" src="https://thumbs.dreamstime.com/b/vector-logo-colorful-design-41236752.jpg" alt="" /></a>
+      <a href="" className=""> <img className="size-40" src="/src/img/logo-aesop-rock-removebg-preview.png" alt="" /></a>
       <a href="" className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Shop</a>
       <a href="" className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Contact</a>
       
     </nav>
-        <div className="text-center m-30">
-          <p className="font-bold text-8xl">Blackhole</p>
-          <p className="font-bold text-8xl text-amber-400"> Superette</p>
+        <div className="img-title text-center m-30">
+          <p className="font-bold text-8xl font-urban">Blackhole</p>
+          <p className="font-bold text-8xl text-amber-400 font-urban "> Superette</p>
           </div>
     </header>
 
 
 
     <section className="artistStory p-10">
-      <h3 className="text-bold text-5xl font-bold">Aesop Rock</h3>
+      <h3 className="text-bold text-5xl font-bold font-karantina-bold">Aesop Rock</h3>
       <div className="md:flex p-10">  
         <p className="pr-5 m-5 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, voluptatem iste iusto assumenda esse quasi cupiditate tempore nesciunt cumque odio totam sapiente quam cum laboriosam illo expedita animi aut ex!
         Reprehenderit commodi, culpa nobis consequatur odio facilis praesentium porro rerum quos atque deleniti illum non laudantium doloribus vel nulla recusandae quas repellat autem temporibus esse nisi? Ut officia libero eaque?
@@ -43,7 +43,8 @@ const IndexPage: React.FC = () => {
     </section>
 
     <section className="sountractSection">
-    <h2 className="text-5xl font-bold text-center">Soundtrack</h2>
+    <h2 className="text-5xl font-bold text-center font-karantina-bold">Soundtrack</h2>
+    <iframe src="/src/img/aesop-rock-video.mp4" className="aspect-video"></iframe>
 
     </section>
 
@@ -52,7 +53,7 @@ const IndexPage: React.FC = () => {
     <section className="artistVinyle m-10 pb-10">
       {/* flex justify-center */}
 
-      <h2 className="text-5xl font-bold m-5 p-5">Vinyle</h2>
+      <h2 className="text-5xl font-bold m-5 p-5 font-karantina-bold">Vinyle</h2>
       <CarouselStyled/>
       <Button>Voir les rayons</Button>
       <div>
@@ -61,14 +62,14 @@ const IndexPage: React.FC = () => {
     </section>
 
     <section className="tournee m-10">
-        <h2 className="text-5xl font-bold rotate-3 p-5">Tournée </h2>
+        <h2 className="text-5xl font-bold rotate-3 p-5 font-karantina-bold">Tournée </h2>
       <TourneeList/>
     
       <Button className="m-5">Passer à la caisse</Button>
     </section>
 
     <section>
-      <h2 className="text-5xl font-bold m-5 p-5">Shop</h2>
+      <h2 className="text-5xl font-bold m-5 p-5 font-karantina-bold">Shop</h2>
       <div className="carousel-shop md: p-20">
  <Carousel
       opts={{

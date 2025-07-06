@@ -13,6 +13,7 @@ import AdminPanel from "./pages/admin/adminPanel";
 import { ProtectedLayout } from "./layouts/protected-layout";
 import { AuthProvider } from "./contexte/authContext";
 import AdminHome from "./pages/admin/adminHomePage";
+import "./assets/fonts/fonts.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
