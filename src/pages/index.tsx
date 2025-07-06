@@ -60,13 +60,13 @@ const IndexPage: React.FC = () => {
 
     <section className="tournee m-10">
         <h2 className="text-5xl font-bold rotate-3 p-5">Tournée </h2>
-
+      <TourneeList/>
     
-      <Button>Passer à la caisse</Button>
+      <Button className="m-5">Passer à la caisse</Button>
     </section>
 
     <section>
-      <h2>Shop</h2>
+      <h2 className="text-5xl font-bold m-5 p-5">Shop</h2>
       <div className="carousel-shop md: p-20">
  <Carousel
       opts={{
@@ -97,7 +97,7 @@ const IndexPage: React.FC = () => {
       <span className="sm:flex sm:flex-nowrap sm:m-20">
       <div className="pr-2">
         <h3>Tournée</h3>
-      <TourneeList/>
+     
       </div>
 
       <div className="pr-2">

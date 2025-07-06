@@ -26,6 +26,9 @@ createRoot(document.getElementById("root")!).render(
              <Route element={<ProtectedLayout/>}>
          <Route path="AdminPanel" element={<AdminPanel/>}/>
         </Route>
+        <Route element={<ProtectedLayout/>}>
+        <Route path="/AdminPanel/:id" element={<AdminPanel />} />
+        </Route>
         <Route element={<ProtectedLayout/>} >
         <Route path="adminHome" element={<AdminHome/>}/>
         </Route>
