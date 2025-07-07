@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import CarouselStyled from "@/components/carousel/vinyle-carousel-aesop";
 // import FrontEndTournee from "@/components/carousel/front-end-tournee";
 import TourneeList from "@/components/tournee-list/tournee-list";
+import LogoFill from "@/components/logo-animation/logo-fill";
 
 
 
@@ -12,6 +13,7 @@ import TourneeList from "@/components/tournee-list/tournee-list";
 const IndexPage: React.FC = () => {
   return (
     <>
+    <LogoFill/>
     <header className="bg-[url(/src/img/new-cover.jpg)] bg-cover bg-center ">
     <nav className="flex flex-nowrap justify-center">
       <a href="" className=" text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Histoire</a>

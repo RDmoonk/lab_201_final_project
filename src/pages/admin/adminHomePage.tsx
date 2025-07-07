@@ -76,18 +76,13 @@ export default function AdminHome() {
                     {d.date.toDate().toLocaleDateString()} — {d.ville}, {d.pays} ({d.lieu}){" "}
                     {d.soldout && <span className="text-red-600 font-semibold">[Sold Out]</span>}
                   </p>
-                  <Button variant="secondary" size="sm" onClick={() => d.id && navigate(`/AdminPanel/${d.id}`)}>
-                    Modifier
-                    </Button>
+                  <div className="">
+
+                  <Button variant="secondary" size="sm" onClick={() => d.id && navigate(`/AdminPanel/${d.id}`)} className="mr-5">Modifier</Button>
                   
 
-                  <Button
-                    variant="destructive"
-                    size="sm"
-                    onClick={() => d.id && handleDelete(d.id)}
-                  >
-                    Supprimer
-                  </Button>
+                  <Button variant="destructive"size="sm" onClick={() => d.id && handleDelete(d.id)}>Supprimer</Button>
+                    </div>
                   
                 </CardContent>
               </Card>
