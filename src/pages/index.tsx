@@ -14,7 +14,7 @@ const IndexPage: React.FC = () => {
   return (
     <>
     <LogoFill/>
-    <header className="bg-[url(/src/img/new-cover.jpg)] bg-cover bg-center ">
+    <header className="bg-[url(/src/img/new-cover.jpg)] bg-cover bg-center h-150">
     <nav className="flex flex-nowrap justify-center">
       <a href="" className=" text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Histoire</a>
       <a href="" className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Tour</a>
@@ -25,7 +25,9 @@ const IndexPage: React.FC = () => {
     </nav>
         <div className="img-title text-center m-30">
           <p className="font-bold text-8xl font-urban">Blackhole</p>
-          <p className="font-bold text-8xl text-amber-400 font-urban "> Superette</p>
+          <p className="font-bold text-8xl text-amber-400 font-urban text-center "> Superette</p>
+
+        
           </div>
     </header>
 
