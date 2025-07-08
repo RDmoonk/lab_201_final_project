@@ -64,7 +64,7 @@ const IndexPage: React.FC = () => {
             <Button>Voir les rayons</Button>
           </section>
 
-          <section className="tournee m-10">
+          <section className="tournee m-10 bg-[url(/src/img/backgroundTicket.jpeg)]">
             <h2 className="text-5xl font-bold rotate-3 p-5 font-karantina-bold">Tournée </h2>
             <TourneeList />
             <Button className="m-5">Passer à la caisse</Button>
