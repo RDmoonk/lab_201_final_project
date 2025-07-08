@@ -1,129 +1,111 @@
+import React, { useEffect, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import CarouselStyled from "@/components/carousel/vinyle-carousel-aesop";
-// import FrontEndTournee from "@/components/carousel/front-end-tournee";
 import TourneeList from "@/components/tournee-list/tournee-list";
 import LogoFill from "@/components/logo-animation/logo-fill";
 
-
-
-
-
 const IndexPage: React.FC = () => {
+  const [showMainContent, setShowMainContent] = useState(false);
+
+  useEffect(() => {
+    // Délai pour laisser le temps à l’animation de LogoFill (ex: 4.5s)
+    const timer = setTimeout(() => {
+      setShowMainContent(true);
+    }, 4500); // Change cette durée si ton animation est plus longue/courte
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-    <LogoFill/>
-    <header className="bg-[url(/src/img/new-cover.jpg)] bg-cover bg-center h-150">
-    <nav className="flex flex-nowrap justify-center">
-      <a href="" className=" text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Histoire</a>
-      <a href="" className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Tour</a>
-      <a href="" className=""> <img className="size-40" src="/src/img/logo-aesop-rock-removebg-preview.png" alt="" /></a>
-      <a href="" className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Shop</a>
-      <a href="" className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Contact</a>
-      
-    </nav>
-        <div className="img-title text-center m-30">
-          <p className="font-bold text-8xl font-urban">Blackhole</p>
-          <p className="font-bold text-8xl text-amber-400 font-urban text-center "> Superette</p>
-
-        
-          </div>
-    </header>
-
-
-
-    <section className="artistStory p-10">
-      <h3 className="text-bold text-5xl font-bold font-karantina-bold">Aesop Rock</h3>
-      <div className="md:flex p-10">  
-        <p className="pr-5 m-5 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, voluptatem iste iusto assumenda esse quasi cupiditate tempore nesciunt cumque odio totam sapiente quam cum laboriosam illo expedita animi aut ex!
-        Reprehenderit commodi, culpa nobis consequatur odio facilis praesentium porro rerum quos atque deleniti illum non laudantium doloribus vel nulla recusandae quas repellat autem temporibus esse nisi? Ut officia libero eaque?
-        Enim, ullam iste doloribus provident deserunt doloremque facilis praesentium quos quibusdam, similique totam voluptates eaque veniam sed accusamus adipisci eius cumque, sint commodi saepe molestias. Soluta odit ducimus corporis in?
-        Dicta sint quisquam beatae aspernatur odit officiis vero magni illo? Eos iusto amet itaque modi expedita placeat asperiores ducimus debitis iste corporis, voluptatibus accusamus, repellendus nam aut ad quam impedit!</p>
-        {/* <div className="">  */}
-           <img className="size-200" src="/src/img/aesop-rock-pic.jpg" alt="" />
-        {/* </div> */}
-      </div >
-    </section>
-
-    <section className="sountractSection">
-    <h2 className="text-5xl font-bold text-center font-karantina-bold">Soundtrack</h2>
-    <iframe src="/src/img/aesop-rock-video.mp4" className="aspect-video"></iframe>
-
-    </section>
-
-  
-
-    <section className="artistVinyle m-10 pb-10">
-      {/* flex justify-center */}
-
-      <h2 className="text-5xl font-bold m-5 p-5 font-karantina-bold">Vinyle</h2>
-      <CarouselStyled/>
-      <Button>Voir les rayons</Button>
-      <div>
-
-      </div>
-    </section>
-
-    <section className="tournee m-10">
-        <h2 className="text-5xl font-bold rotate-3 p-5 font-karantina-bold">Tournée </h2>
-      <TourneeList/>
-    
-      <Button className="m-5">Passer à la caisse</Button>
-    </section>
-
-    <section>
-      <h2 className="text-5xl font-bold m-5 p-5 font-karantina-bold">Shop</h2>
-      <div className="carousel-shop md: p-20">
- <Carousel
-      opts={{
-        align: "start",
-      }}
-      className="w-full max-w-sm"
-    >
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-3xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
+      {!showMainContent ? (
+        <LogoFill />
+      ) : (
+        <>
+          {/* === CONTENU PRINCIPAL === */}
+          <header className="bg-[url(/src/img/new-cover.jpg)] bg-cover bg-center h-150">
+            <nav className="flex flex-nowrap justify-center">
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Histoire</a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Tour</a>
+              <a className=""> <img className="size-40" src="/src/img/logo-aesop-rock-removebg-preview.png" alt="" /></a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Shop</a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Contact</a>
+            </nav>
+            <div className="img-title text-center m-30">
+              <p className="font-bold text-8xl font-urban">Blackhole</p>
+              <p className="font-bold text-8xl text-amber-400 font-urban text-center"> Superette</p>
             </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
-    </div>
-    </section>
+          </header>
 
-    <footer className="border-4">
-      <span className="sm:flex sm:flex-nowrap sm:m-20">
-      <div className="pr-2">
-        <h3>Tournée</h3>
-     
-      </div>
+          <section className="artistStory p-10">
+            <h3 className="text-bold text-5xl font-bold font-karantina-bold">Aesop Rock</h3>
+            <div className="md:flex p-10">
+              <p className="pr-5 m-5 text-xl">
+                Un album où Aesop Rock prouve qu’on peut encore surprendre après 25 ans de carrière. 
+                C’est à la fois chill et profond, ça donne envie 
+                d’observer les détails les plus nuls de ta journée d’un autre œil.
+                Pour accompagner l’album, il a sorti Aesop Rock Black Hole Superette Experience.
+                Un jeu première personne immersif dans lequel on écoute l’album.
+              </p>
+              <img className="size-200" src="/src/img/aesop-rock-pic.jpg" alt="" />
+            </div>
+          </section>
 
-      <div className="pr-2">
-        <h3>Shop</h3>
-      </div>
+          <section className="sountractSection">
+            <h2 className="text-5xl font-bold text-center font-karantina-bold">Soundtrack</h2>
+            <iframe src="/src/img/aesop-rock-video.mp4" className="aspect-video w-full"></iframe>
+          </section>
 
-      <div className="pr">
-        <h3>Contact</h3>
-      </div>
+          <section className="artistVinyle m-10 pb-10">
+            <h2 className="text-5xl font-bold m-5 p-5 font-karantina-bold">Vinyle</h2>
+            <CarouselStyled />
+            <Button>Voir les rayons</Button>
+          </section>
 
-     
-      </span>
-      <div className="logo-footer size-40 flex ml-20">
-        <img src="https://thumbs.dreamstime.com/b/vector-logo-colorful-design-41236752.jpg" alt="" />
-      </div>
-    </footer>
-    
-      </>
-  
+          <section className="tournee m-10">
+            <h2 className="text-5xl font-bold rotate-3 p-5 font-karantina-bold">Tournée </h2>
+            <TourneeList />
+            <Button className="m-5">Passer à la caisse</Button>
+          </section>
+
+          <section>
+            <h2 className="text-5xl font-bold m-5 p-5 font-karantina-bold">Shop</h2>
+            <div className="carousel-shop md: p-20">
+              <Carousel opts={{ align: "start" }} className="w-full max-w-sm">
+                <CarouselContent>
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="p-1">
+                        <Card>
+                          <CardContent className="flex aspect-square items-center justify-center p-6">
+                            <span className="text-3xl font-semibold">{index + 1}</span>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </div>
+          </section>
+
+          <footer className="border-4">
+            <span className="sm:flex sm:flex-nowrap sm:m-20">
+              <div className="pr-2"><h3>Tournée</h3></div>
+              <div className="pr-2"><h3>Shop</h3></div>
+              <div className="pr"><h3>Contact</h3></div>
+            </span>
+            <div className="logo-footer size-40 flex ml-20">
+              <img src="https://thumbs.dreamstime.com/b/vector-logo-colorful-design-41236752.jpg" alt="" />
+            </div>
+          </footer>
+        </>
+      )}
+    </>
   );
 };
 

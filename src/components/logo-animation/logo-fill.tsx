@@ -1,10 +1,9 @@
-import React from 'react';
 
 const AnimatedAesopRock = () => {
   const imageUrl = '/src/img/filled-animation-logo/logo-aesop-rock-removebg-preview.png';
 
   return (
-    <div className="relative h-screen bg-[url(/src/img/bg-logo-filled-anim.jpg)] flex items-center justify-center">
+    <div className="relative h-screen bg-[url(/src/img/bg-logo-filled-anim.jpg)] bg-cover bg-center flex items-center justify-center">
       {/* Image en noir et blanc */}
       <img 
         src={imageUrl}
@@ -21,7 +20,14 @@ const AnimatedAesopRock = () => {
         />
       </div>
 
-      {/* Animation CSS */}
+      {/* Texte "Walk with me" fixe et visible */}
+      <div className="absolute bottom-16 text-center z-20">
+        <p className="text-white text-6xl font-karantina-bold drop-shadow-2xl">
+          Walk with me
+        </p>
+      </div>
+
+      {/* Animation CSS pour l'image */}
       <style>{`
         .color-reveal {
           mask-image: linear-gradient(to right, black 0%, black 40%, transparent 60%);
