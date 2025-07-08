@@ -23,38 +23,42 @@ export default function CarouselStyled() {
   
     return(
         <>
-    <section className="m-20 flex justify-center">
-      <div className="items-center">
-        <Carousel className="w-full max-w-sm"
-        plugins={[plugin.current]}
-        >
-          <CarouselContent className="-ml-1">
-            {imagePaths.map((src, index) => (
-              <CarouselItem key={index} className="pl-1 md:basis-1 lg:basis-1/2">
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-0 overflow-hidden">
-                      <img
-                        src={src}
-                        alt={`carousel-image-${index}`}
-                        className="object-cover w-full h-full"
-                      />
-                    </CardContent>
-                  </Card>    
-                </div>
-              </CarouselItem>
-              
-            ))}
-          </CarouselContent>
-          
-          <CarouselPrevious />
-          <CarouselNext />
-          <img src="/src/img/skate-for-carousel-removebg-preview.png" alt="" className=""/>
-        </Carousel>
-        
-      </div>
-      
-    </section>
+   <section className="m-20 flex flex-col items-center">
+  {/* Carousel avec largeur max */}
+  <div className="w-full max-w-4xl">
+    <Carousel plugins={[plugin.current]}>
+      <CarouselContent className="-ml-1">
+        {imagePaths.map((src, index) => (
+          <CarouselItem key={index} className="basis-1/2 px-2">
+            <Card>
+              <CardContent className="flex aspect-square items-center justify-center p-0 overflow-hidden">
+                <img
+                  src={src}
+                  alt={`carousel-image-${index}`}
+                  className="object-cover w-full h-full"
+                />
+              </CardContent>
+            </Card>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  </div>
+
+  {/* Skateboard image avec même largeur que le carousel */}
+  <div className="w-full max-w-4xl mt-10">
+    <img
+      src="/src/img/skate-for-carousel-removebg-preview.png"
+      alt="skateboard"
+      className="w-full h-auto"
+    />
+  </div>
+</section>
+
+
+
         </>
     )
 }
