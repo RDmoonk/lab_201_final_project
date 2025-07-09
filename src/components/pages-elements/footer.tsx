@@ -5,7 +5,7 @@ export default function Footer() {
     {/* Logo */}
     <div className="flex-shrink-0">
       <img
-        src="/src/img/logo-footer-aesop-rock-removebg-preview.png"
+        src="/src/img/filled-animation-logo/logo-remade.png"
         alt="Aesop Rock Logo"
         className="w-40 md:w-52"
       />

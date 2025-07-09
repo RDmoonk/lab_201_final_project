@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 import CarouselStyled from "@/components/carousel/vinyle-carousel-aesop";
 import LogoFill from "@/components/logo-animation/logo-fill";
 import FrontEndTournee from "@/components/front-end-tournee";
-// import ShopCarousel from "@/components/carousel/shopCarousel";
 import Header from "@/components/pages-elements/header";
 import Footer from "@/components/pages-elements/footer";
 import { useNavigate } from "react-router-dom";
+import ShopCarousel from "@/components/carousel/shopCarousel";
 
 const IndexPage: React.FC = () => {
   const [showMainContent, setShowMainContent] = useState(false);
@@ -83,6 +83,7 @@ const IndexPage: React.FC = () => {
 
           <section>
             <h2 className="text-8xl font-bold m-5 p-5 font-karantina-bold text-center" id="shop">Shop</h2>
+            <ShopCarousel/>
           <div className="flex justify-center my-10"><Button className="text-2xl px-10 py-6" onClick={() => navigate('/shop')}> Passer à la caisse </Button></div>
           </section>
 
