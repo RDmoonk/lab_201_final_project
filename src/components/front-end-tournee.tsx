@@ -60,9 +60,11 @@ export default function FrontEndTournee() {
             </span>
 
             {d.soldout && (
-              <span className="text-red-600 text-md font-semibold mt-1">
-                [Sold Out]
-              </span>
+           <span className="relative inline-block bg-red-600 text-black text-lg md:text-2xl font-bold px-6 py-2 border-4 border-red-800 rounded-lg font-spooky before:content-[''] after:content-[''] before:absolute after:absolute before:top-1/2 after:top-1/2 before:-translate-y-1/2 after:-translate-y-1/2 before:w-5 before:h-5 after:w-5 after:h-5 before:-left-3 after:-right-3 shadow-lg">
+              [Sold Out]
+            </span>
+
+
             )}
           </CardContent>
         </Card>
