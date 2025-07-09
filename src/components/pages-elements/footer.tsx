@@ -37,9 +37,12 @@ export default function Footer() {
       <div>
         <h3 className="font-bold text-xl md:text-2xl mb-6">CONTACT</h3>
         <ul className="space-y-2 text-base">
-          <li>Instagram</li>
-          <li>Youtube</li>
-          <li>Spotify</li>
+          <li><a href="https://www.instagram.com/aesoprockwins/">Instagram</a></li>
+          <li> <a href="https://www.youtube.com/channel/UCzVC0z-KheQEV_2H2zg6V9w">Youtube</a></li>
+          <li><a href="https://open.spotify.com/intl-fr/artist/2fSaE6BXtQy0x7R7v9IOmZ">Spotify</a></li>
+          
+         
+          
         </ul>
       </div>
     </div>
