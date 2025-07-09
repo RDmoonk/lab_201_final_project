@@ -27,11 +27,11 @@ const IndexPage: React.FC = () => {
           {/* === CONTENU PRINCIPAL === */}
           <header className="bg-[url(/src/img/new-cover.jpg)] bg-cover bg-center h-150">
             <nav className="flex flex-nowrap justify-center font-spooky">
-              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Histoire</a>
-              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Tour</a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl">Histoire</a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl">Tour</a>
               <a className=""> <img className="size-40" src="/src/img/logo-aesop-rock-1.png" alt="" /></a>
-              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Shop</a>
-              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Contact</a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl">Shop</a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl">Contact</a>
             </nav>
             <div className="img-title text-center m-30">
               <p className="font-bold text-8xl font-urban">Blackhole</p>
@@ -43,10 +43,10 @@ const IndexPage: React.FC = () => {
             <h3 className="text-bold text-5xl font-bold font-karantina-bold">Aesop Rock</h3>
             <div className="md:flex p-10">
               <p className="pr-5 m-5 text-xl">
-                Un album où Aesop Rock prouve qu’on peut encore surprendre après 25 ans de carrière. 
-                C’est à la fois chill et profond, ça donne envie 
-                d’observer les détails les plus nuls de ta journée d’un autre œil.
-                Pour accompagner l’album, il a sorti Aesop Rock Black Hole Superette Experience.
+                Un album où Aesop Rock prouve qu’on peut encore surprendre <b>après 25 ans de carrière.</b> 
+                C’est à la fois <b>chill</b> et <b>profond</b>, ça donne envie 
+                d’observer les <b>détails</b> les plus nuls de ta journée d’un autre œil.
+                Pour accompagner l’album, il a sorti Aesop Rock <b>Black Hole Superette Experience.</b>
                 Un jeu première personne immersif dans lequel on écoute l’album.
               </p>
               <img className="size-200" src="/src/img/aesop-rock-pic.jpg" alt="" />
@@ -61,7 +61,7 @@ const IndexPage: React.FC = () => {
           <section className="artistVinyle m-10 pb-10">
             <h2 className="text-5xl font-bold m-5 p-5 font-karantina-bold">Vinyle</h2>
             <CarouselStyled />
-            <Button>Voir les rayons</Button>
+            <Button className="ml-30">Voir les rayons</Button>
           </section>
 
           <section className="tournee m-10 bg-[url(/src/img/backgroundTicket.jpeg)]">
