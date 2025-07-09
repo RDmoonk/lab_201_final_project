@@ -27,9 +27,9 @@ export default function Footer() {
       <div>
         <h3 className="font-bold text-xl md:text-2xl mb-6">SHOP</h3>
         <ul className="space-y-2 text-base">
-          <li>T-Shirt</li>
-          <li>Sweat</li>
-          <li>Vinyle</li>
+          <li> <a href="#tshirt">T-Shirt</a></li>
+          <li> <a href="#sweats">Sweat</a></li>
+          <li> <a href="#vinyle">Vinyle</a></li>
         </ul>
       </div>
 
