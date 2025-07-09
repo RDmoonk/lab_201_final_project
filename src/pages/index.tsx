@@ -66,6 +66,10 @@ const IndexPage: React.FC = () => {
           <section className="sountractSection" id="soundtrack">
             <h2 className="text-8xl font-bold text-center font-karantina-bold">Soundtrack</h2>
             <iframe src="/src/img/aesop-rock-video.mp4" className="aspect-video w-full"></iframe>
+            <div className="m-10">
+              <img src="/src/img/logo-album-removebg-preview.png" alt="album logo" className="pb-10" />
+              <img src="/src/img/album-prez.jpg" alt="songs" className="pb-10"  />
+            </div>
           </section>
 
           <section className="artistVinyle m-10 pb-10">
