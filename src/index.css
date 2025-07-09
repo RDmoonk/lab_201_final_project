@@ -17,6 +17,13 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Spooky-Brush';
+  src: url('./assets/fonts/Spooky-Brush.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -135,6 +142,10 @@
   font-family: 'Karantina-Bold', sans-serif;
 }
 
+.font-spooky{
+  font-family: 'Spooky-Brush', 'sans-serif';
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -145,6 +156,10 @@
 
     .font-karantina-bold{
   font-family: 'karantina-bold', sans-serif;
+}
+
+.font-spooky{
+  font-family: 'Spooky-Brush', 'sans-serif';
 }
   }
   body {

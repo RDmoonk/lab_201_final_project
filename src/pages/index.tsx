@@ -26,7 +26,7 @@ const IndexPage: React.FC = () => {
         <>
           {/* === CONTENU PRINCIPAL === */}
           <header className="bg-[url(/src/img/new-cover.jpg)] bg-cover bg-center h-150">
-            <nav className="flex flex-nowrap justify-center">
+            <nav className="flex flex-nowrap justify-center font-spooky">
               <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Histoire</a>
               <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Tour</a>
               <a className=""> <img className="size-40" src="/src/img/logo-aesop-rock-1.png" alt="" /></a>
