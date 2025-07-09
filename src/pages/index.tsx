@@ -29,7 +29,7 @@ const IndexPage: React.FC = () => {
             <nav className="flex flex-nowrap justify-center">
               <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Histoire</a>
               <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Tour</a>
-              <a className=""> <img className="size-40" src="/src/img/logo-aesop-rock-removebg-preview.png" alt="" /></a>
+              <a className=""> <img className="size-40" src="/src/img/logo-aesop-rock-1.png" alt="" /></a>
               <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Shop</a>
               <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-3xl">Contact</a>
             </nav>
