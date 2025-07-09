@@ -82,7 +82,7 @@ const IndexPage: React.FC = () => {
             <h2 className="text-8xl font-bold rotate-3 p-5 font-karantina-bold text-center">Tournée </h2>
             {/* <TourneeList /> */}
             <FrontEndTournee/>
-             <div className="flex justify-center my-10"><Button className="rotate-3 text-2xl px-10 py-6"> Passer à la caisse </Button></div>
+             <div className="flex justify-center my-10"><Button className="rotate-3 text-2xl px-10 py-6" onClick={() => navigate('/shop')}> Passer à la caisse </Button></div>
           </section>
 
           <section>
