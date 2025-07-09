@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import CarouselStyled from "@/components/carousel/vinyle-carousel-aesop";
-// import TourneeList from "@/components/tournee-list/tournee-list";
 import LogoFill from "@/components/logo-animation/logo-fill";
 import FrontEndTournee from "@/components/front-end-tournee";
+import ShopCarousel from "@/components/carousel/shopCarousel";
 
 const IndexPage: React.FC = () => {
   const [showMainContent, setShowMainContent] = useState(false);
@@ -74,25 +72,7 @@ const IndexPage: React.FC = () => {
 
           <section>
             <h2 className="text-5xl font-bold m-5 p-5 font-karantina-bold">Shop</h2>
-            <div className="carousel-shop md: p-20">
-              <Carousel opts={{ align: "start" }} className="w-full max-w-sm">
-                <CarouselContent>
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                      <div className="p-1">
-                        <Card>
-                          <CardContent className="flex aspect-square items-center justify-center p-6">
-                            <span className="text-3xl font-semibold">{index + 1}</span>
-                          </CardContent>
-                        </Card>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-            </div>
+         <ShopCarousel/>
           </section>
 
           <footer className="border-black bg-black text-white flex">
