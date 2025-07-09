@@ -83,7 +83,6 @@ const IndexPage: React.FC = () => {
 
           <section>
             <h2 className="text-8xl font-bold m-5 p-5 font-karantina-bold text-center" id="shop">Shop</h2>
-         <ShopCarousel/>
           <div className="flex justify-center my-10"><Button className="text-2xl px-10 py-6" onClick={() => navigate('/shop')}> Passer à la caisse </Button></div>
           </section>
 

@@ -1,6 +1,5 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card"
-// import { Button } from "../ui/button";
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 

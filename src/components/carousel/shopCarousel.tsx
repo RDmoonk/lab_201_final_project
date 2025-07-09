@@ -10,29 +10,45 @@ export default function ShopCarousel() {
         Autoplay({delay: 2000, stopOnInteraction: true})
     )
 
+  const imagePaths= [
+    "/src/img/tshirt-logo-blue.jpeg",
+    "/src/img/tshirt-logo-cover.jpeg",
+    "/src/img/tshirt-logo-gray.jpeg",
+    "/src/img/tshirt-logo-green.jpeg"
+
+  ]
+
+  
     return(
         <>
-    <div className="carousel-shop md: p-20">
-               <Carousel opts={{ align: "start" }} className="w-full max-w-sm"
-               plugins={[plugin.current]}
-               >
-                 <CarouselContent>
-                   {Array.from({ length: 5 }).map((_, index) => (
-                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                       <div className="p-1">
-                         <Card>
-                           <CardContent className="flex aspect-square items-center justify-center p-6">
-                             <span className="text-3xl font-semibold">{index + 1}</span>
-                           </CardContent>
-                         </Card>
-                       </div>
-                     </CarouselItem>
-                   ))}
-                 </CarouselContent>
-                 <CarouselPrevious />
-                 <CarouselNext />
-               </Carousel>
-             </div>
+   <section className="m-20 flex flex-col items-center">
+  {/* Carousel avec largeur max */}
+  <div className="w-full max-w-4xl">
+    <Carousel plugins={[plugin.current]}>
+      <CarouselContent className="-ml-1">
+        {imagePaths.map((src, index) => (
+          <CarouselItem key={index} className="basis-1/2 px-2">
+            <Card>
+              <CardContent className="flex aspect-square items-center justify-center p-0 overflow-hidden">
+                <img
+                  src={src}
+                  alt={`carousel-image-${index}`}
+                  className="object-cover w-full h-full"
+                />
+              </CardContent>
+            </Card>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  </div>
+
+  {/* Skateboard image avec même largeur que le carousel */}
+  <div className="w-full max-w-4xl mt-10">
+  </div>
+</section>
 
         </>
     )
