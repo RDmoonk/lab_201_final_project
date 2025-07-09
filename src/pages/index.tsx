@@ -63,7 +63,7 @@ const IndexPage: React.FC = () => {
             </div>
           </section>
 
-          <section className="sountractSection">
+          <section className="sountractSection" id="soundtrack">
             <h2 className="text-8xl font-bold text-center font-karantina-bold">Soundtrack</h2>
             <iframe src="/src/img/aesop-rock-video.mp4" className="aspect-video w-full"></iframe>
           </section>

@@ -1,3 +1,8 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faSpotify } from '@fortawesome/free-brands-svg-icons'
+
 export default function Footer() {
     return(
         <footer className="bg-black text-white py-10 px-6 md:px-20" id="footer">
@@ -17,9 +22,9 @@ export default function Footer() {
       <div>
         <h3 className="font-bold text-xl md:text-2xl mb-6">TOURNÉE</h3>
         <ul className="space-y-2 text-base">
-          <li>Tracklist complète</li>
-          <li>Dates</li>
-          <li>Histoire</li>
+          <li><a href="#soundtrack">Tracklist complète</a></li>
+          <li><a href="#tournee">Dates</a></li>
+          <li><a href="#histoire">Histoire</a></li>
         </ul>
       </div>
 
@@ -37,9 +42,10 @@ export default function Footer() {
       <div>
         <h3 className="font-bold text-xl md:text-2xl mb-6">CONTACT</h3>
         <ul className="space-y-2 text-base">
-          <li><a href="https://www.instagram.com/aesoprockwins/">Instagram</a></li>
-          <li> <a href="https://www.youtube.com/channel/UCzVC0z-KheQEV_2H2zg6V9w">Youtube</a></li>
-          <li><a href="https://open.spotify.com/intl-fr/artist/2fSaE6BXtQy0x7R7v9IOmZ">Spotify</a></li>
+          <li><a href="https://www.instagram.com/aesoprockwins/"><FontAwesomeIcon icon= {faInstagram}className="text-3xl text-purple-600 pr-1"/>Instagram</a></li>
+          <li><a href="https://www.youtube.com/channel/UCzVC0z-KheQEV_2H2zg6V9w">
+          <FontAwesomeIcon icon={faYoutube} className="text-3xl text-red-600 pr-1" />Youtube</a></li>
+          <li><a href="https://open.spotify.com/intl-fr/artist/2fSaE6BXtQy0x7R7v9IOmZ"> <FontAwesomeIcon icon= {faSpotify}className="text-3xl text-green-600 pr-1"/>  Spotify</a></li>
           
          
           
