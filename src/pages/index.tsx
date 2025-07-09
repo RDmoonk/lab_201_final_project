@@ -29,7 +29,7 @@ const IndexPage: React.FC = () => {
        <Header/>
 
           <section className="artistStory p-10" id="histoire">
-            <h3 className="text-bold text-5xl font-bold font-karantina-bold">Aesop Rock</h3>
+            <h3 className="text-bold text-8xl font-bold font-karantina-bold">Aesop Rock</h3>
             <div className="md:flex p-10">
               <p className="pr-5 m-5 text-xl">
                 Un album où Aesop Rock prouve qu’on peut encore surprendre <b>après 25 ans de carrière.</b> 
@@ -62,25 +62,25 @@ const IndexPage: React.FC = () => {
           </section>
 
           <section className="sountractSection">
-            <h2 className="text-5xl font-bold text-center font-karantina-bold">Soundtrack</h2>
+            <h2 className="text-8xl font-bold text-center font-karantina-bold">Soundtrack</h2>
             <iframe src="/src/img/aesop-rock-video.mp4" className="aspect-video w-full"></iframe>
           </section>
 
           <section className="artistVinyle m-10 pb-10">
-            <h2 className="text-5xl font-bold m-5 p-5 font-karantina-bold">Vinyle</h2>
+            <h2 className="text-8xl font-bold m-5 p-5 font-karantina-bold text-center">Vinyle</h2>
             <CarouselStyled />
             <Button className="ml-30">Voir les rayons</Button>
           </section>
 
           <section className="tournee m-10 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover " id="tournee">
-            <h2 className="text-5xl font-bold rotate-3 p-5 font-karantina-bold ">Tournée </h2>
+            <h2 className="text-8xl font-bold rotate-3 p-5 font-karantina-bold text-center">Tournée </h2>
             {/* <TourneeList /> */}
             <FrontEndTournee/>
             <Button className="m-5">Passer à la caisse</Button>
           </section>
 
           <section>
-            <h2 className="text-5xl font-bold m-5 p-5 font-karantina-bold" id="shop">Shop</h2>
+            <h2 className="text-8xl font-bold m-5 p-5 font-karantina-bold text-center" id="shop">Shop</h2>
          <ShopCarousel/>
           </section>
 
