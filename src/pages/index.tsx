@@ -26,11 +26,11 @@ const IndexPage: React.FC = () => {
           {/* === CONTENU PRINCIPAL === */}
           <header className="bg-[url(/src/img/new-cover.jpg)] bg-cover bg-center h-150">
             <nav className="flex flex-nowrap justify-center font-spooky">
-              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl">Histoire</a>
-              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl">Tour</a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl" href="#histoire">Histoire</a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl" href="#tournee">Tournées</a>
               <a className=""> <img className="size-40" src="/src/img/logo-aesop-rock-1.png" alt="" /></a>
-              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl">Shop</a>
-              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl">Contact</a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl" href="#shop">Shop</a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl" href="#footer">Contact</a>
             </nav>
             <div className="img-title text-center m-30">
               <p className="font-bold text-8xl font-urban">Blackhole</p>
@@ -38,7 +38,7 @@ const IndexPage: React.FC = () => {
             </div>
           </header>
 
-          <section className="artistStory p-10">
+          <section className="artistStory p-10" id="histoire">
             <h3 className="text-bold text-5xl font-bold font-karantina-bold">Aesop Rock</h3>
             <div className="md:flex p-10">
               <p className="pr-5 m-5 text-xl">
@@ -63,7 +63,7 @@ const IndexPage: React.FC = () => {
             <Button className="ml-30">Voir les rayons</Button>
           </section>
 
-          <section className="tournee m-10 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover ">
+          <section className="tournee m-10 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover " id="tournee">
             <h2 className="text-5xl font-bold rotate-3 p-5 font-karantina-bold">Tournée </h2>
             {/* <TourneeList /> */}
             <FrontEndTournee/>
@@ -71,11 +71,11 @@ const IndexPage: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-5xl font-bold m-5 p-5 font-karantina-bold">Shop</h2>
+            <h2 className="text-5xl font-bold m-5 p-5 font-karantina-bold" id="shop">Shop</h2>
          <ShopCarousel/>
           </section>
 
-          <footer className="border-black bg-black text-white flex">
+          <footer className="border-black bg-black text-white flex" id="footer">
               <img src="/src/img/logo-footer-aesop-rock-removebg-preview.png" alt="" />
             <div className="sm:flex sm:flex-nowrap sm:m-20 ">
               <div className="pr-2 mr-20">
