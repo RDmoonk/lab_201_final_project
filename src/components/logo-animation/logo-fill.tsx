@@ -1,6 +1,6 @@
 
 const AnimatedAesopRock = () => {
-  const imageUrl = '/src/img/filled-animation-logo/logo-aesop-rock-removebg-preview.png';
+  const imageUrl = '/src/img/filled-animation-logo/logo-remade.png';
 
   return (
     <div className="relative h-screen bg-[url(/src/img/bg-logo-filled-anim.jpg)] bg-cover bg-center flex items-center justify-center">
@@ -22,7 +22,7 @@ const AnimatedAesopRock = () => {
 
       {/* Texte "Walk with me" fixe et visible */}
       <div className="absolute bottom-16 text-center z-20">
-        <p className="text-white text-6xl font-karantina-bold drop-shadow-2xl">
+        <p className="text-white text-7xl font-karantina-bold drop-shadow-2xl font-stylin">
           Walk with me
         </p>
       </div>
