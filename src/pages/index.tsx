@@ -6,9 +6,11 @@ import FrontEndTournee from "@/components/front-end-tournee";
 import ShopCarousel from "@/components/carousel/shopCarousel";
 import Header from "@/components/pages-elements/header";
 import Footer from "@/components/pages-elements/footer";
+import { useNavigate } from "react-router-dom";
 
 const IndexPage: React.FC = () => {
   const [showMainContent, setShowMainContent] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Délai pour laisser le temps à l’animation de LogoFill (ex: 4.5s)
@@ -69,7 +71,7 @@ const IndexPage: React.FC = () => {
           <section className="artistVinyle m-10 pb-10">
             <h2 className="text-8xl font-bold m-5 p-5 font-karantina-bold text-center">Vinyle</h2>
             <CarouselStyled />
-            <Button className="ml-30">Voir les rayons</Button>
+            <Button className="ml-30" onClick={() => navigate('/shop')}>Voir les rayons</Button>
           </section>
 
           <section className="tournee m-10 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover " id="tournee">
@@ -82,6 +84,7 @@ const IndexPage: React.FC = () => {
           <section>
             <h2 className="text-8xl font-bold m-5 p-5 font-karantina-bold text-center" id="shop">Shop</h2>
          <ShopCarousel/>
+         <Button onClick={() => navigate('/shop')}>Passer à la caisse</Button>
           </section>
 
         <Footer/>
