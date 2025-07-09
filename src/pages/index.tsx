@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import CarouselStyled from "@/components/carousel/vinyle-carousel-aesop";
 import LogoFill from "@/components/logo-animation/logo-fill";
 import FrontEndTournee from "@/components/front-end-tournee";
-import ShopCarousel from "@/components/carousel/shopCarousel";
+// import ShopCarousel from "@/components/carousel/shopCarousel";
 import Header from "@/components/pages-elements/header";
 import Footer from "@/components/pages-elements/footer";
 import { useNavigate } from "react-router-dom";
