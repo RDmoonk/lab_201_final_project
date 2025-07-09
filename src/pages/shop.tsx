@@ -7,27 +7,22 @@ import TourneeList from "@/components/tournee-list/tournee-list";
 export default function Shop() {
     return(
         <>
-        <header className="bg-white">
-      <nav className="flex justify-around items-center p-5 font-bold text-md uppercase">
-        <ul className="flex justify-around items-center gap-6 w-full text-center">
-          <li>Histoire</li>
-          <li>Tour</li>
-          <li className="text-2xl font-mono tracking-widest"><img className="size-40" src="/src/img/logo-aesop-rock-1.png" alt="" /></li>
-          <li>Shop</li>
-          <li>Contact</li>
-          <li>
-
-          </li>
-        </ul>
-      </nav>
-    </header>
+                 <header className="h-150">
+            <nav className="flex flex-nowrap justify-center font-spooky ">
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 pr-20 text-5xl " href="#histoire">Histoire</a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 pr-20 text-5xl" href="#tournee">Tournées</a>
+              <a className="pr-10"> <img className="size-40" src="/src/img/logo-aesop-rock-1.png" alt="" /></a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 pr-20 text-5xl" href="#shop">Shop</a>
+              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 pr-20 text-5xl" href="#footer">Contact</a>
+            </nav>
+          </header>
 
        <section className="tournee m-10 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover " id="tournee">
             <h2 className="text-8xl font-bold rotate-3 p-5 font-karantina-bold text-center">Tournée </h2>
             <TourneeList/>
             {/* <img src="src/img/aesop-rock-removebg-preview.png" alt="" /> */}
           </section>
-          <Button className="m-5 rotate-3">Passer à la caisse</Button>
+         <div className="flex justify-center my-10"><Button className="rotate-3 text-2xl px-10 py-6"> Passer à la caisse </Button></div>
 
         <section className="">
            <h2 className="text-8xl font-bold m-5 p-5 font-karantina-bold text-center">T-shirt</h2>
