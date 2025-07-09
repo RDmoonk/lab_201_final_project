@@ -39,28 +39,28 @@ export default function FrontEndTournee() {
         <Card key={d.id} className="bg-transparent shadow-none border-none text-center">
           <CardContent className="flex flex-col items-center space-y-1 p-2">
             <span
-              className="text-2xl uppercase tracking-widest text-black font-poppinsl"
+              className="text-4xl uppercase tracking-widest text-black font-poppinsl"
               style={{ WebkitTextStroke: '1px white', color: 'black' }}
             >
               {d.date.toDate().toLocaleDateString("fr-FR", { day: "2-digit", month: "long" })}
             </span>
 
             <span
-              className="text-3xl md:text-5xl font-extrabold uppercase leading-tight text-black"
+              className="text-5xl md:text-5xl font-extrabold uppercase leading-tight text-black"
               style={{ WebkitTextStroke: '1px white', color: 'black' }}
             >
               {d.ville}
             </span>
 
             <span
-              className="text-lg md:text-xl font-medium text-black"
+              className="text-3xl font-medium text-black"
               style={{ WebkitTextStroke: '1px white', color: 'black' }}
             >
               {d.lieu}
             </span>
 
             {d.soldout && (
-           <span className="relative inline-block bg-red-600 text-black text-lg md:text-2xl font-bold px-6 py-2 border-4 border-red-800 rounded-lg font-spooky before:content-[''] after:content-[''] before:absolute after:absolute before:top-1/2 after:top-1/2 before:-translate-y-1/2 after:-translate-y-1/2 before:w-5 before:h-5 after:w-5 after:h-5 before:-left-3 after:-right-3 shadow-lg">
+           <span className="relative inline-block bg-red-600 text-black text-lg md:text-2xl font-bold px-6 py-2 border-4 border-red-800 rounded-lg font-spooky before:content-[''] after:content-[''] before:absolute after:absolute before:top-1/2 after:top-1/2 before:-translate-y-1/2 after:-translate-y-1/2 before:w-5 before:h-5 after:w-5 after:h-5 bef before:-left-3 after:-right-3 shadow-lg">
               [Sold Out]
             </span>
 

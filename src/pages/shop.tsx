@@ -2,7 +2,7 @@ import ShopCarousel from "@/components/carousel/shopCarousel";
 import CarouselStyled from "@/components/carousel/vinyle-carousel-aesop";
 import Footer from "@/components/pages-elements/footer";
 import { Button } from "@/components/ui/button";
-import TourneeList from "@/components/tournee-list/tournee-list";
+import TourneeList from "@/components/tournee-list/tourneeListShop";
 
 export default function Shop() {
     return(

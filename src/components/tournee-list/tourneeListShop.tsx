@@ -53,7 +53,7 @@ export default function TourneeList() {
   className="bg-transparent shadow-none border-none text-center"
 >
   <p
-    className="text-2xl uppercase tracking-widest text-black font-poppinsl"
+    className="text-4xl uppercase tracking-widest text-black font-poppinsl"
     style={{ WebkitTextStroke: '1px white', color: 'black' }}
   >
     {date.date.toDate().toLocaleDateString("fr-FR", {
@@ -63,14 +63,14 @@ export default function TourneeList() {
   </p>
 
   <h3
-    className="text-3xl md:text-5xl font-extrabold uppercase leading-tight text-black"
+    className="text-5xl md:text-5xl font-extrabold uppercase leading-tight text-black"
     style={{ WebkitTextStroke: '1px white', color: 'black' }}
   >
     {date.ville}
   </h3>
 
   <p
-    className="text-lg md:text-xl font-medium text-black"
+    className="text-3xl font-medium text-black"
     style={{ WebkitTextStroke: '1px white', color: 'black' }}
   >
     {date.lieu}
