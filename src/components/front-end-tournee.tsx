@@ -1,12 +1,8 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-// import { useNavigate } from "react-router-dom"
-// import { signOut, getAuth } from "firebase/auth"
 import { firebaseConfig } from "@/firebase/firebase-config"
 import { initializeApp } from "firebase/app"
 import { useState, useEffect } from "react"
-import { getFirestore, collection, getDocs, deleteDoc, doc, Timestamp } from "firebase/firestore"
-
+import { getFirestore, collection, getDocs, Timestamp } from "firebase/firestore"
 
 type DateTournee = {
   id?: string
@@ -17,7 +13,7 @@ type DateTournee = {
   soldout: boolean
 }
 
-
+export default function FrontEndTournee() {
   const app = initializeApp(firebaseConfig)
   const db = getFirestore(app)
 
@@ -37,34 +33,40 @@ type DateTournee = {
     setDates(loadedDates)
   }
 
-  const handleDelete = async (id: string) => {
-    await deleteDoc(doc(db, "dates_tournee", id))
-    await loadDates()
-  }
+  return (
+    <div className="flex flex-wrap justify-center gap-12 p-12">
+      {dates.map((d) => (
+        <Card key={d.id} className="bg-transparent shadow-none border-none text-center">
+          <CardContent className="flex flex-col items-center space-y-1 p-2">
+            <span
+              className="text-2xl uppercase tracking-widest text-black font-poppinsl"
+              style={{ WebkitTextStroke: '1px white', color: 'black' }}
+            >
+              {d.date.toDate().toLocaleDateString("fr-FR", { day: "2-digit", month: "long" })}
+            </span>
 
+            <span
+              className="text-3xl md:text-5xl font-extrabold uppercase leading-tight text-black"
+              style={{ WebkitTextStroke: '1px white', color: 'black' }}
+            >
+              {d.ville}
+            </span>
 
-export default function FrontEndTournee() {
-    return(
-        <>
-          <div className="space-y-4">
-            {dates.map((d) => (
-              <Card key={d.id}>
-                <CardContent className="flex flex-col md:flex-row md:items-center justify-between gap-2 p-4">
-                  <p className="text-sm">
-                    {d.date.toDate().toLocaleDateString()} — {d.ville}, {d.pays} ({d.lieu}){" "}
-                    {d.soldout && <span className="text-red-600 font-semibold">[Sold Out]</span>}
-                  </p>
-                  <Button
-                    variant="destructive"
-                    size="sm"
-                    onClick={() => d.id && handleDelete(d.id)}
-                  >
-                    Supprimer
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </>
-    )
+            <span
+              className="text-lg md:text-xl font-medium text-black"
+              style={{ WebkitTextStroke: '1px white', color: 'black' }}
+            >
+              {d.lieu}
+            </span>
+
+            {d.soldout && (
+              <span className="text-red-600 text-md font-semibold mt-1">
+                [Sold Out]
+              </span>
+            )}
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  )
 }

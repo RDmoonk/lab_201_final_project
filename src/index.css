@@ -24,6 +24,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Poppins-Light';
+  src: url('./assets/fonts/Poppins-Light.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -146,6 +155,14 @@
   font-family: 'Spooky-Brush', 'sans-serif';
 }
 
+.font-inter{
+  font-family: 'Inter', sans-serif;
+}
+
+.font-poppinsl{
+  font-family: 'Poppins-Light', sans-serif;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -160,6 +177,14 @@
 
 .font-spooky{
   font-family: 'Spooky-Brush', 'sans-serif';
+}
+
+.font-inter{
+  font-family: 'Inter', sans-serif;
+}
+
+.font-poppinsl{
+  font-family: 'Poppins-Light', sans-serif;
 }
   }
   body {

@@ -3,8 +3,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import CarouselStyled from "@/components/carousel/vinyle-carousel-aesop";
-import TourneeList from "@/components/tournee-list/tournee-list";
+// import TourneeList from "@/components/tournee-list/tournee-list";
 import LogoFill from "@/components/logo-animation/logo-fill";
+import FrontEndTournee from "@/components/front-end-tournee";
 
 const IndexPage: React.FC = () => {
   const [showMainContent, setShowMainContent] = useState(false);
@@ -64,9 +65,10 @@ const IndexPage: React.FC = () => {
             <Button className="ml-30">Voir les rayons</Button>
           </section>
 
-          <section className="tournee m-10 bg-[url(/src/img/backgroundTicket.jpeg)]">
+          <section className="tournee m-10 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover ">
             <h2 className="text-5xl font-bold rotate-3 p-5 font-karantina-bold">Tournée </h2>
-            <TourneeList />
+            {/* <TourneeList /> */}
+            <FrontEndTournee/>
             <Button className="m-5">Passer à la caisse</Button>
           </section>
 
