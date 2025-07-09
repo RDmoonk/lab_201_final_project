@@ -93,14 +93,40 @@ const IndexPage: React.FC = () => {
             </div>
           </section>
 
-          <footer className="border-4">
-            <span className="sm:flex sm:flex-nowrap sm:m-20">
-              <div className="pr-2"><h3>Tournée</h3></div>
-              <div className="pr-2"><h3>Shop</h3></div>
-              <div className="pr"><h3>Contact</h3></div>
-            </span>
-            <div className="logo-footer size-40 flex ml-20">
-              <img src="https://thumbs.dreamstime.com/b/vector-logo-colorful-design-41236752.jpg" alt="" />
+          <footer className="border-black bg-black text-white flex">
+              <img src="/src/img/logo-footer-aesop-rock-removebg-preview.png" alt="" />
+            <div className="sm:flex sm:flex-nowrap sm:m-20 ">
+              <div className="pr-2 mr-20">
+                <h3>Tournée</h3>
+                <ul>
+                <li>Tracklist</li>
+                <li>Dates</li>
+                <li>Histoire</li>
+                </ul>
+                </div>
+              <div className="pr-2 mr-20">
+                <ul>
+                <h3>Shop</h3>
+                <li>T-shirt</li>
+                <li>Sweat</li>
+                <li>Vynile</li>
+                </ul>
+                </div>
+              <div className="pr">
+                <h3>Contact</h3>
+                <ul>
+                <li>Instagram</li>
+                <li>Youtube</li>
+                <li>Spotify</li>
+                </ul>
+                </div>
+            </div>
+            <div className="logo-footer size-40 flex ml-20"> 
+            </div>
+
+            <div className="pt-50">
+            <p>© 2025 – Black Hole Superette. Tous droits réservés.</p>
+            <p>Mentions légales – Politique de confidentialité</p>
             </div>
           </footer>
         </>
