@@ -22,7 +22,7 @@ export default function Footer() {
       <div>
         <h3 className="font-bold text-xl md:text-2xl mb-6">TOURNÉE</h3>
         <ul className="space-y-2 text-base">
-          <li><a href="#soundtrack"></a>Tracklist complète</li>
+          <li><a href="#soundtrack">Tracklist complète</a></li>
           <li><a href="#tournee">Dates</a></li>
           <li><a href="#histoire">Histoire</a></li>
         </ul>

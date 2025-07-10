@@ -68,7 +68,7 @@ const IndexPage: React.FC = () => {
             <iframe src="/src/img/aesop-rock-video.mp4" className="aspect-video w-full rounded-xl my-5"></iframe>
             <div className="flex flex-col items-center gap-5 my-10">
               <img src="/src/img/logo-album-removebg-preview.png" alt="album logo" className="max-w-xs sm:max-w-md" />
-              <img src="/src/img/album-prez.jpg" alt="songs" className="max-w-full rounded-xl" />
+              <img src="/src/img/POCHETTE_TRANCHE (1).png" alt="songs" className="max-w-full rounded-xl" />
             </div>
           </section>
 
