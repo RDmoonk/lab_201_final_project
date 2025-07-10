@@ -12,7 +12,8 @@ export default function CarouselStyled() {
     "/img/album-cover-ar-3.jpg",
     "/img/album-cover-ar-4.jpg",
     "/img/album-cover-ar-5.jpg",
-    "/img/album-cover-ar-6.jpg"
+    "/img/album-cover-ar-6.jpg",
+    "/img/new-cover.jpg"
 
   ]
 
@@ -28,7 +29,7 @@ export default function CarouselStyled() {
     <Carousel plugins={[plugin.current]}>
       <CarouselContent className="-ml-1">
         {imagePaths.map((src, index) => (
-          <CarouselItem key={index} className="basis-1/2 sm:basis-1/3 md:basis-1/4 px-1 sm:px-2">
+          <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4 px-1 sm:px-2">
             <Card>
               <CardContent className="flex aspect-square items-center justify-center p-0 overflow-hidden">
                 <img
