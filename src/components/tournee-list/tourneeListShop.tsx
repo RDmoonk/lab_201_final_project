@@ -53,7 +53,7 @@ export default function TourneeList() {
   className="bg-transparent shadow-none border-none text-center"
 >
   <p
-    className="text-4xl uppercase tracking-widest text-black font-poppinsl"
+    className="text-4xl uppercase tracking-widest text-black font-poppinsl p-5"
     style={{ WebkitTextStroke: '1px white', color: 'black' }}
   >
     {date.date.toDate().toLocaleDateString("fr-FR", {
@@ -63,23 +63,22 @@ export default function TourneeList() {
   </p>
 
   <h3
-    className="text-5xl md:text-5xl font-extrabold uppercase leading-tight text-black"
+    className="text-9xl md:text-7xl font-extrabold uppercase leading-tight text-black p-5"
     style={{ WebkitTextStroke: '1px white', color: 'black' }}
   >
     {date.ville}
   </h3>
 
   <p
-    className="text-3xl font-medium text-black"
+    className="text-5xl uppercase tracking-widest text-black font-poppinsl p-5"
     style={{ WebkitTextStroke: '1px white', color: 'black' }}
   >
     {date.lieu}
   </p>
 
   {date.soldout && (
-    <span className="relative inline-block bg-red-600 text-black text-lg md:text-2xl font-bold px-6 py-2 border-4 border-red-800 rounded-lg font-spooky before:content-[''] after:content-[''] before:absolute after:absolute before:top-1/2 after:top-1/2 before:-translate-y-1/2 after:-translate-y-1/2 before:w-5 before:h-5 after:w-5 after:h-5 before:-left-3 after:-right-3 shadow-lg mt-2">
-      [SOLD OUT]
-    </span>
+ 
+     <img src="img/téléchargement_-_2025-07-10T113513.389-removebg-preview.png" alt="" className="size-50 p-5"/>
   )}
 </div>
 

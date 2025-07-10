@@ -65,7 +65,7 @@ const IndexPage: React.FC = () => {
             <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold text-center font-karantina-bold">
               SOUNDTRACK
             </h2>
-            <iframe src="/img/aesop-rock-video.mp4" className="aspect-video w-full rounded-xl my-5"></iframe>
+            <iframe src="/img/aesop-rock-video.mp4" className=""></iframe>
           </section>
 
           <section className="artistVinyle px-5 sm:px-10 m-10 pb-10">
@@ -85,7 +85,7 @@ const IndexPage: React.FC = () => {
               TOURNEE
             </h2>
             <FrontEndTournee />
-            <div className="flex justify-center my-10">
+            <div className="flex justify-center my-10 p-20">
               <Button className="rotate-0 sm:rotate-3 text-xl sm:text-2xl px-6 sm:px-10 py-4 sm:py-6" onClick={() => navigate('/shop')}>
                 Passer à la caisse
               </Button>
