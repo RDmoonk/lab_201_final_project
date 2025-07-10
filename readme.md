@@ -1,93 +1,24 @@
-# React Quickstart ⚡
+# 🎤 Projet Lab 201 – Aesop Rock Backoffice
 
-A minimal and customizable React starter template to kickstart your projects with best practices.
+Développé par MIHINDOU Naomi et MUNKATU-MENGA Roi David, ce projet React + TypeScript utilise **Vite** pour le bundling rapide et **Firebase Hosting** pour le déploiement.
 
-## Features
+Il s'agit d'une application web en deux parties :
 
-- Vite - Fast build and development environment
-- React - Modern UI library for building interactive user interfaces
-- TypeScript - Stringly typed for better development experience
-- Tailwind CSS - Utility-first CSS framework
-- Eslint & Prettier - Code quality and formatting enforcement
-- React Router - Client-side routing made easy
+- 🎨 **Frontend** : une interface dédiée à la présentation de l'artiste **Aesop Rock**
+- 🛠️ **Backoffice** : un espace d'administration permettant d’**ajouter**, **modifier** ou **supprimer** des dates de tournée
 
-## Getting started
+## 🔧 Technologies principales
 
-### Prerequisites
+- ⚛️ **React + TypeScript**
+- ⚡ **Vite**
+- ☁️ **Firebase Hosting**
+- 💨 **Tailwind CSS** pour un design moderne et responsive
+- 🎠 **Embla Carousel** avec **Autoplay** pour un carrousel fluide et interactif
+- 🧩 **shadcn/ui** pour des composants UI élégants et accessibles
 
-- [Node JS](https://nodejs.org/)
-- [pnpm](https://pnpm.io/)
+---
 
-### Installation
+Ce projet est conçu pour offrir à la fois une **expérience utilisateur fluide** et une **gestion de contenu simple** via le backoffice.
 
-#### Clone the repository
-
-```sh
-git clone https://github.com/martin-dinahet/react-quickstart.git
-cd react-quickstart
-```
-
-#### Install dependencies
-
-```sh
-pnpm install
-```
-
-#### Development
-
-Start the development server
-
-```sh
-pnpm dev
-```
-
-Then, open [localhost:5173](http://localhost:5173) in your browser.
-
-#### Build for production
-
-```sh
-pnpm build
-```
-
-#### Linting & Formatting
-
-Run ESLint to check linting errors:
-
-```sh
-pnpm lint
-```
-
-Format code with Prettier:
-
-```sh
-pnpm format
-```
-
-## Directory structure
-
-```
-🗁 .
-├── 🗋 eslint.config.js
-├── 🗋 index.html
-├── 🗋 package.json
-├── 🗋 pnpm-lock.yaml
-├── 🗋 readme.md
-├── 🗋 tsconfig.app.json
-├── 🗋 tsconfig.json
-├── 🗋 tsconfig.node.json
-├── 🗋 vite.config.ts
-├── 🗁 public
-│   └── 🗋 favicon.svg
-└── 🗁 src
-    ├── 🗋 index.css
-    ├── 🗋 main.tsx
-    ├── 🗋 vite-env.d.ts
-    ├── 🗁 components
-    │   └── 🗋 example-component.tsx
-    ├── 🗁 layouts
-    │   └── 🗋 main-layout.tsx
-    ├── 🗁 lib
-    │   └── 🗋 utils.ts
-    └── 🗁 pages
-        └── 🗋 index.tsx
-```
+Vous trouverez ici le lien du site:
+https://lab-201-final-project.web.app/
