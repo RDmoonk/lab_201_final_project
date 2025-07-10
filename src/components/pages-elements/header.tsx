@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'; 
 
 export default function Header() {
 
@@ -9,6 +11,7 @@ export default function Header() {
               <a className="" href="/"><img className="size-40" src="/src/img/logo-aesop-rock-1.png" alt="" /></a>
                <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl" href="#shop">Shop</a>
               <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl" href="#footer">Contact</a>
+              <a href="panier" className=" drop-shadow-amber-400 p-5 text-5xl"><FontAwesomeIcon icon={faShoppingCart} /></a>
             </nav>
             <div className="img-title text-center m-30">
               <p className="font-bold text-9xl font-urban">Blackhole</p>

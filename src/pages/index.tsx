@@ -8,6 +8,9 @@ import Footer from "@/components/pages-elements/footer";
 import { useNavigate } from "react-router-dom";
 import ShopCarousel from "@/components/carousel/shopCarousel";
 
+
+
+
 const IndexPage: React.FC = () => {
   const [showMainContent, setShowMainContent] = useState(false);
   const navigate = useNavigate();
@@ -67,7 +70,7 @@ const IndexPage: React.FC = () => {
             <h2 className="text-8xl font-bold text-center font-karantina-bold">Soundtrack</h2>
             <iframe src="/src/img/aesop-rock-video.mp4" className="aspect-video w-full"></iframe>
             <div className="m-10">
-              <img src="/src/img/logo-album-removebg-preview.png" alt="album logo" className="pb-10" />
+              <img src="/src/img/logo-album-removebg-preview.png" alt="album logo" className="pb-10 pl-130" />
               <img src="/src/img/album-prez.jpg" alt="songs" className="pb-10"  />
             </div>
           </section>
