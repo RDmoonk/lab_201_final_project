@@ -22,13 +22,13 @@ export default function CarouselStyled() {
   
     return(
         <>
-   <section className="m-20 flex flex-col items-center">
-  {/* Carousel avec largeur max */}
-  <div className="w-full max-w-4xl">
+   <section className="m-10 md:m-20 flex flex-col items-center">
+  {/* Carousel avec largeur max responsive */}
+  <div className="w-full max-w-md sm:max-w-2xl md:max-w-4xl">
     <Carousel plugins={[plugin.current]}>
       <CarouselContent className="-ml-1">
         {imagePaths.map((src, index) => (
-          <CarouselItem key={index} className="basis-1/2 px-2">
+          <CarouselItem key={index} className="basis-1/2 sm:basis-1/3 md:basis-1/4 px-1 sm:px-2">
             <Card>
               <CardContent className="flex aspect-square items-center justify-center p-0 overflow-hidden">
                 <img
@@ -47,7 +47,7 @@ export default function CarouselStyled() {
   </div>
 
   {/* Skateboard image avec même largeur que le carousel */}
-  <div className="w-full max-w-4xl mt-10">
+  <div className="w-full max-w-md sm:max-w-2xl md:max-w-4xl mt-6 md:mt-10">
     <img
       src="/src/img/skate-for-carousel-removebg-preview.png"
       alt="skateboard"
@@ -55,6 +55,7 @@ export default function CarouselStyled() {
     />
   </div>
 </section>
+
 
 
 
