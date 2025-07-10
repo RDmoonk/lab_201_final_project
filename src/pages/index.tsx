@@ -8,97 +8,110 @@ import Footer from "@/components/pages-elements/footer";
 import { useNavigate } from "react-router-dom";
 import ShopCarousel from "@/components/carousel/shopCarousel";
 
-
-
-
 const IndexPage: React.FC = () => {
   const [showMainContent, setShowMainContent] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Délai pour laisser le temps à l’animation de LogoFill (ex: 4.5s)
     const timer = setTimeout(() => {
       setShowMainContent(true);
-    }, 4500); // Change cette durée si ton animation est plus longue/courte
+    }, 4500);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <>
+    <main className="overflow-x-hidden">
       {!showMainContent ? (
         <LogoFill />
       ) : (
         <>
-          {/* === CONTENU PRINCIPAL === */}
-       <Header/>
+          <Header />
 
-          <section className="artistStory p-10" id="histoire">
-            <h3 className="text-bold text-8xl font-bold font-karantina-bold">Aesop Rock</h3>
-            <div className="md:flex p-10">
-              <p className="pr-5 m-5 text-xl">
-                Un album où Aesop Rock prouve qu’on peut encore surprendre <b>après 25 ans de carrière.</b> 
+          <section className="artistStory px-5 sm:px-10 py-10" id="histoire">
+            <h3 className="text-4xl sm:text-6xl md:text-8xl font-bold font-karantina-bold text-center sm:text-left">
+              Aesop Rock
+            </h3>
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-5 p-5 sm:p-10">
+              <p className="text-lg sm:text-xl leading-relaxed text-justify">
+                Un album où Aesop Rock prouve qu’on peut encore surprendre <b>après 25 ans de carrière.</b>
                 C’est à la fois <b>chill</b> et <b>profond</b>, ça donne envie 
                 d’observer les <b>détails</b> les plus nuls de ta journée d’un autre œil.
                 Pour accompagner l’album, il a sorti Aesop Rock <b>Black Hole Superette Experience.</b>
                 Un jeu première personne immersif dans lequel on écoute l’album.
-        <div className="mt-20">
-          <p> <strong>Pourquoi une supérette mentale ?</strong><br />
-          Il aurait pu choisir un bar, une chambre d’ado ou un vaisseau spatial. Mais non. Aesop Rock a ouvert une supérette. Pas une vraie, pas une qui vend des conserves ou des cordons bleus. Une supérette mentale, coincée quelque part entre son subconscient et le nôtre. Pourquoi ? Parce qu’il n’y a pas de lieu plus ordinaire – et donc plus propice à l’extraordinaire.</p>
-          <p> <strong>Le cerveau comme supermarché</strong><br />
-          Chaque rayon, chaque produit, chaque étiquette est un souvenir empaqueté, une idée floue mise sous vide, une paranoïa douce vendue en spray. Ce n’est pas une boutique. C’est un catalogue émotionnel. <br />
-          <i>Costco</i> évoque les routines absurdes. <br />
-          <i>Black Plums</i> flirte avec le rêve éveillé. <br />
-          <i>Snail Zero</i> te vend un escargot qui a vu trop de choses.<br />
-          Aesop Rock transforme le quotidien en mythologie. Le banal en matière noire.</p>
-          <p> <strong>Tu fais tes courses dans ta tête</strong><br /> 
-            Ce que tu remplis dans ton panier, c’est toi : ta fatigue du monde, tes tics de langage, les souvenirs d’objets perdus, les moments où t’étais ailleurs, sans savoir où. <br />
-            Mais le rayon que tu prends, ce n’est pas le même qu’un autre. C’est ce qui rend cette supérette intime et universelle à la fois.</p>
-            <p> <strong>Une idée absurde… sauf qu’elle fonctionne</strong><br />
-            Dans un monde où les albums se battent pour faire du bruit, Aesop Rock choisit le silence graphique, les références tordues, les images qui flottent. <br />
-            Il ne t’explique pas : il te laisse errer. Comme dans une vraie supérette : tu viens chercher du lait, tu repars avec un encensoir et des chips au wasabi.</p>
-            <p> <strong>Et toi, tu rentres quand dans la supérette ?</strong><br />
-            Elle est ouverte. Les néons clignotent. Pas de musique d’ambiance. Juste des beats psychédéliques et des souvenirs mal rangés. Tu entres. Tu regardes. Et peut-être qu’en tombant sur un “nettoyant pour pensées trop longues”, tu te rends compte que ce n’est pas la supérette d’Aesop Rock. <br />
-            C’est peut-être la tienne.</p></div>
+                <div className="mt-10">
+                  <p><strong>Pourquoi une supérette mentale ?</strong><br />
+                  Il aurait pu choisir un bar, une chambre d’ado ou un vaisseau spatial. Mais non. Aesop Rock a ouvert une supérette...
+                  </p>
+                  <p><strong>Le cerveau comme supermarché</strong><br />
+                  Chaque rayon, chaque produit, chaque étiquette est un souvenir empaqueté...
+                  </p>
+                  <p><strong>Tu fais tes courses dans ta tête</strong><br />
+                  Ce que tu remplis dans ton panier, c’est toi : ta fatigue du monde...
+                  </p>
+                  <p><strong>Une idée absurde… sauf qu’elle fonctionne</strong><br />
+                  Dans un monde où les albums se battent pour faire du bruit...
+                  </p>
+                  <p><strong>Et toi, tu rentres quand dans la supérette ?</strong><br />
+                  Elle est ouverte. Les néons clignotent...
+                  </p>
+                </div>
               </p>
-    
-              <img className="size-200" src="/src/img/aesop-rock-pic.jpg" alt="" />
+              <img className="w-full max-w-sm object-cover rounded-lg mx-auto" src="/src/img/aesop-rock-pic.jpg" alt="" />
             </div>
           </section>
 
-          <section className="sountractSection" id="soundtrack">
-            <h2 className="text-8xl font-bold text-center font-karantina-bold">Soundtrack</h2>
-            <iframe src="/src/img/aesop-rock-video.mp4" className="aspect-video w-full"></iframe>
-            <div className="m-10">
-              <img src="/src/img/logo-album-removebg-preview.png" alt="album logo" className="pb-10 pl-130" />
-              <img src="/src/img/album-prez.jpg" alt="songs" className="pb-10"  />
+          <section className="sountractSection px-5 sm:px-10" id="soundtrack">
+            <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold text-center font-karantina-bold">
+              Soundtrack
+            </h2>
+            <iframe src="/src/img/aesop-rock-video.mp4" className="aspect-video w-full rounded-xl my-5"></iframe>
+            <div className="flex flex-col items-center gap-5 my-10">
+              <img src="/src/img/logo-album-removebg-preview.png" alt="album logo" className="max-w-xs sm:max-w-md" />
+              <img src="/src/img/album-prez.jpg" alt="songs" className="max-w-full rounded-xl" />
             </div>
           </section>
 
-          <section className="artistVinyle m-10 pb-10">
-            <h2 className="text-8xl font-bold m-5 p-5 font-karantina-bold text-center">Vinyle</h2>
+          <section className="artistVinyle px-5 sm:px-10 m-10 pb-10">
+            <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold m-5 p-5 font-karantina-bold text-center">
+              Vinyle
+            </h2>
             <CarouselStyled />
-          <div className="flex justify-center my-10"><Button className="text-2xl px-10 py-6" onClick={() => navigate('/shop')}> Voir le rayon </Button></div>
+            <div className="flex justify-center my-10">
+              <Button className="text-xl sm:text-2xl px-6 sm:px-10 py-4 sm:py-6" onClick={() => navigate('/shop')}>
+                Voir le rayon
+              </Button>
+            </div>
           </section>
 
-          <section className="tournee m-10 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover " id="tournee">
-            <h2 className="text-8xl font-bold rotate-3 p-5 font-karantina-bold text-center">Tournée </h2>
-            {/* <TourneeList /> */}
-            <FrontEndTournee/>
-             <div className="flex justify-center my-10"><Button className="rotate-3 text-2xl px-10 py-6" onClick={() => navigate('/shop')}> Passer à la caisse </Button></div>
+          <section className="tournee m-5 sm:m-10 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover bg-center" id="tournee">
+            <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold rotate-0 sm:rotate-3 p-5 font-karantina-bold text-center">
+              Tournée
+            </h2>
+            <FrontEndTournee />
+            <div className="flex justify-center my-10">
+              <Button className="rotate-0 sm:rotate-3 text-xl sm:text-2xl px-6 sm:px-10 py-4 sm:py-6" onClick={() => navigate('/shop')}>
+                Passer à la caisse
+              </Button>
+            </div>
           </section>
 
-          <section>
-            <h2 className="text-8xl font-bold m-5 p-5 font-karantina-bold text-center" id="shop">Shop</h2>
-            <ShopCarousel/>
-          <div className="flex justify-center my-10"><Button className="text-2xl px-10 py-6" onClick={() => navigate('/shop')}> Passer à la caisse </Button></div>
+          <section className="px-5 sm:px-10" id="shop">
+            <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold m-5 p-5 font-karantina-bold text-center">
+              Shop
+            </h2>
+            <ShopCarousel />
+            <div className="flex justify-center my-10">
+              <Button className="text-xl sm:text-2xl px-6 sm:px-10 py-4 sm:py-6" onClick={() => navigate('/shop')}>
+                Passer à la caisse
+              </Button>
+            </div>
           </section>
 
-        <Footer/>
-        
+          <Footer />
         </>
       )}
-    </>
+    </main>
   );
 };
 
