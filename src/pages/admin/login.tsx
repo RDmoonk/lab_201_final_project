@@ -35,22 +35,24 @@ export default function AdminLogin() {
   }
 
   return (
-    <div className="min-h-screen bg-muted">
+    <div className="min-h-screen bg-muted flex flex-col">
       {/* Header */}
-       <header className="sticky top-0 bg-white shadow-md z-10 border-b">
-        <div className="flex items-center justify-between max-w-6xl mx-auto p-4">
+      <header className="sticky top-0 bg-white shadow-md z-10 border-b">
+        <div className="flex items-center justify-between max-w-6xl mx-auto px-4 py-3 sm:py-4">
           <Button variant="ghost" onClick={() => navigate("/")}>
             ← Retour
           </Button>
-          <h1 className="text-xl font-semibold">Admin Login</h1>
-          <div />
+          <h1 className="text-lg sm:text-xl font-semibold text-center w-full">
+            Admin Login
+          </h1>
+          <div className="w-16 sm:w-24" /> {/* espace pour équilibrer le header */}
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="flex items-center justify-center px-4 py-10">
-        <Card className="w-full max-w-md">
-          <CardContent className="space-y-6 p-6">
+      <main className="flex flex-1 items-center justify-center px-4 py-10">
+        <Card className="w-full max-w-sm sm:max-w-md md:max-w-lg">
+          <CardContent className="space-y-6 p-4 sm:p-6">
             <div className="space-y-2">
               <Label htmlFor="email">Email admin</Label>
               <Input
