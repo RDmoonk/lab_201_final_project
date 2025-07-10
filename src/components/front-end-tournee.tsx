@@ -33,7 +33,7 @@ export default function FrontEndTournee() {
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 ">
       {dates.map((d) => (
         <Card key={d.id} className="bg-transparent shadow-none border-none text-center transition-all duration-300 hover:scale-105">
           <CardContent className="flex flex-col items-center space-y-2 sm:space-y-3 md:space-y-4 p-3 sm:p-4 md:p-5 lg:p-6">

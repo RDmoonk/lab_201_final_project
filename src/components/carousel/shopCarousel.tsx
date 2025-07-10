@@ -22,7 +22,7 @@ export default function ShopCarousel() {
   );
 
   return (
-    <section className="m-10 md:m-20 flex flex-col items-center">
+    <section className="m-15 md:m-20 flex flex-col items-center">
       <div className="w-full h-full">
         <Carousel className="w-full h-full" plugins={[plugin.current]}>
           <CarouselContent className="h-full">

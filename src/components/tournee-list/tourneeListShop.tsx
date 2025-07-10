@@ -42,7 +42,7 @@ export default function TourneeList() {
       <img
         src="/img/aesop-rock-removebg-preview.png"
         alt="Aesop Rock"
-        className="w-80 md:min-w-96 lg:w-[750px] object-contain"
+        className="md:w-80 md:min-w-96 lg:w-[750px] object-contain"
       />
 
       {/* LISTE DES DATES À DROITE */}

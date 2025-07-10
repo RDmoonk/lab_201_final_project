@@ -22,7 +22,7 @@ const AnimatedAesopRock = () => {
 
       {/* Texte "Walk with me" fixe et visible */}
       <div className="absolute bottom-40 text-center z-20">
-        <p className="text-white text-8xl font-karantina-bold drop-shadow-2xl font-stylin">
+        <p className="text-white lg:text-8xl text-6xl font-karantina-bold drop-shadow-2xl font-stylin">
           Walk with me
         </p>
       </div>

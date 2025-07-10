@@ -103,10 +103,17 @@ export default function Shop() {
           </div>
         )}
       </nav>
+     <div className="flex items-center gap-8 font-spooky border-black border-2 md:p-10 mt-170 md:mt-150 ">
+              <a  className="text-shadow-2xs text-shadow-rose-900 font-bold text-3xl md:text-5xl text-black hover:text-rose-800 transition-colors"  href="#tournee"> TOURNEES
+              </a>
+              <a  className="text-shadow-2xs text-shadow-rose-900 font-bold text-3xl md:text-5xl text-black hover:text-rose-800 transition-colors" href="#tshirt"> T-SHIRT </a>
+              <a  className="text-shadow-2xs text-shadow-rose-900 font-bold text-3xl md:text-5xl text-black hover:text-rose-800 transition-colors"  href="#sweats">  SWEAT</a>
+              <a  className="text-shadow-2xs text-shadow-rose-900 font-bold text-3xl md:text-5xl text-black hover:text-rose-800 transition-colors"  href="#vinyle">VINYLE</a>
+            </div>
     </header>
 
 {/* section tournée */}
-            <section className="tournee m-5 md:m-10 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover" id="tournee">
+            <section className="w-full my-8 sm:my-12 md:my-16 lg:my-20 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover bg-center bg-no-repeat rounded-none" id="tournee">
                 <h2 className="text-7xl md:text-8xl font-bold rotate-3 p-3 md:p-5 font-karantina-bold text-center">TOURNEE </h2>
                 <TourneeList/>
             </section>
