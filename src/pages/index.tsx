@@ -33,7 +33,7 @@ const IndexPage: React.FC = () => {
               Aesop Rock
             </h3>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-5 p-5 sm:p-10">
-              <p className="text-lg sm:text-xl leading-relaxed text-justify">
+              <div className="text-lg sm:text-xl leading-relaxed text-justify">
                 Un album où Aesop Rock prouve qu’on peut encore surprendre <b>après 25 ans de carrière.</b>
                 C’est à la fois <b>chill</b> et <b>profond</b>, ça donne envie 
                 d’observer les <b>détails</b> les plus nuls de ta journée d’un autre œil.
@@ -56,7 +56,7 @@ const IndexPage: React.FC = () => {
                   Elle est ouverte. Les néons clignotent...
                   </p>
                 </div>
-              </p>
+              </div>
               <img className="w-full max-w-sm object-cover rounded-lg mx-auto" src="/src/img/aesop-rock-pic.jpg" alt="" />
             </div>
           </section>
