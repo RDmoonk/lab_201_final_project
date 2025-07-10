@@ -1,3 +1,4 @@
+
 export default function Header() {
 
     return(
@@ -5,8 +6,8 @@ export default function Header() {
             <nav className="flex flex-nowrap justify-center font-spooky">
               <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl" href="#histoire">Histoire</a>
               <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl" href="#tournee">Tournées</a>
-              <a className=""> <img className="size-40" src="/src/img/logo-aesop-rock-1.png" alt="" /></a>
-              <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl" href="#shop">Shop</a>
+              <a className="" href="/"><img className="size-40" src="/src/img/logo-aesop-rock-1.png" alt="" /></a>
+               <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl" href="#shop">Shop</a>
               <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-5 text-5xl" href="#footer">Contact</a>
             </nav>
             <div className="img-title text-center m-30">
