@@ -97,7 +97,7 @@ const IndexPage: React.FC = () => {
           </section>
 
           {/* Tour Section */}
-          <section className="tournee mx-4 sm:mx-6 md:mx-8 lg:mx-12 xl:mx-16 my-8 sm:my-12 md:my-16 lg:my-20 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover bg-center bg-no-repeat rounded-lg" id="tournee">
+          <section className="tournee mx-4 sm:mx-6 md:mx-8 lg:mx-12 xl:mx-16 my-8 sm:my-12 md:my-16 lg:my-20 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover bg-center bg-no-repeat rounded-lg"  id="tournee">
             <div className="bg-(url[img/backgroundTicket.png]) bg-opacity-20 rounded-lg p-4 sm:p-6 md:p-8 lg:p-10">
               <h2 className="text-5xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold rotate-0 sm:rotate-1 md:rotate-2 lg:rotate-3 font-karantina-bold text-center mb-6 sm:mb-8 md:mb-10 text-black">
                 TOURNEE

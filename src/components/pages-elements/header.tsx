@@ -19,14 +19,14 @@ export default function Header() {
       <nav className="relative px-4 py-4">
         {/* Navigation Desktop */}
         <div className="hidden lg:flex justify-center items-center font-spooky gap-5">
-          <a className="text-shadow-2xs text-shadow-amber-400 font-bold text-2xl p-4 hover:text-amber-300 transition-colors" href="#histoire">HISTOIRE</a>
-          <a className="text-shadow-2xs text-shadow-amber-400 font-bold text-2xl p-4 hover:text-amber-300 transition-colors" href="#tournee">TOURNEES</a>
+          <a className="text-shadow-2xs text-shadow-amber-400 font-bold text-5xl p-4 hover:text-amber-300 transition-colors" href="#histoire">HISTOIRE</a>
+          <a className="text-shadow-2xs text-shadow-amber-400 font-bold text-5xl p-4 hover:text-amber-300 transition-colors" href="#tournee">TOURNEES</a>
           <a className="p-4" href="/">
             <img className="w-28" src={logo1} alt="logo" />
           </a>
-          <a className="text-shadow-2xs text-shadow-amber-400 font-bold text-2xl p-4 hover:text-amber-300 transition-colors" href="#shop">SHOP</a>
-          <a className="text-shadow-2xs text-shadow-amber-400 font-bold text-2xl p-4 hover:text-amber-300 transition-colors" href="#footer">CONTACT</a>
-          <a href="/panier" className="text-3xl p-4 text-amber-400 hover:text-amber-300 transition-colors">
+          <a className="text-shadow-2xs text-shadow-amber-400 font-bold text-5xl p-4 hover:text-amber-300 transition-colors" href="#shop">SHOP</a>
+          <a className="text-shadow-2xs text-shadow-amber-400 font-bold text-5xl p-4 hover:text-amber-300 transition-colors" href="#footer">CONTACT</a>
+          <a href="/panier" className="text-3xl p-4 text-black hover:text-amber-300 transition-colors">
             <FontAwesomeIcon icon={faShoppingCart} />
           </a>
         </div>

@@ -39,7 +39,7 @@ export default function FrontEndTournee() {
           <CardContent className="flex flex-col items-center space-y-2 sm:space-y-3 md:space-y-4 p-3 sm:p-4 md:p-5 lg:p-6">
             {/* Date */}
             <span
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl uppercase tracking-wide sm:tracking-wider md:tracking-widest text-black font-poppinsl px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-2 md:py-3 lg:py-4 xl:py-5"
+              className="text-5xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl uppercase tracking-wide sm:tracking-wider md:tracking-widest text-black font-poppinsl px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-2 md:py-3 lg:py-4 xl:py-5"
               style={{ WebkitTextStroke: '1px white', color: 'black' }}
             >
               {d.date.toDate().toLocaleDateString("fr-FR", { day: "2-digit", month: "long" })}
@@ -47,7 +47,7 @@ export default function FrontEndTournee() {
 
             {/* Ville */}
             <span
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold uppercase leading-tight text-black px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-2 md:py-3 lg:py-4 xl:py-5"
+              className="text-6xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold uppercase leading-tight text-black px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-2 md:py-3 lg:py-4 xl:py-5"
               style={{ WebkitTextStroke: '1px white', color: 'black' }}
             >
               {d.ville}
@@ -55,7 +55,7 @@ export default function FrontEndTournee() {
 
             {/* Lieu */}
             <span
-              className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium font-poppinsl text-black px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-2 md:py-3 lg:py-4 xl:py-5"
+              className="text-4xl sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-5xl font-medium font-poppinsl text-black px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-2 md:py-3 lg:py-4 xl:py-5"
               style={{ WebkitTextStroke: '1px white', color: 'black' }}
             >
               {d.lieu}
@@ -67,7 +67,7 @@ export default function FrontEndTournee() {
                 <img 
                   src="img/téléchargement_-_2025-07-10T113513.389-removebg-preview.png" 
                   alt="Sold Out" 
-                  className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 2xl:w-32 2xl:h-32 object-contain mx-auto p-1 sm:p-2 md:p-3 lg:p-4 xl:p-5"
+                  className="w-52 h-25 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 2xl:w-45 2xl:h-45 object-contain mx-auto p-1 sm:p-2 md:p-3 lg:p-4 xl:p-5"
                 />
               </div>
             )}
