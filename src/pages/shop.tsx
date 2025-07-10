@@ -3,23 +3,28 @@ import CarouselStyled from "@/components/carousel/vinyle-carousel-aesop";
 import Footer from "@/components/pages-elements/footer";
 import { Button } from "@/components/ui/button";
 import TourneeList from "@/components/tournee-list/tourneeListShop";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'; 
+
 
 export default function Shop() {
     return(
         <>
         {/* Header */}
-<header className="h-150">
-  <nav className="flex flex-wrap justify-center items-center font-spooky px-4 py-5 gap-2 md:gap-5 text-center">
-    <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-2 md:p-5 pr-4 md:pr-20 text-xl md:text-5xl" href="#histoire">Histoire</a>
-    <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-2 md:p-5 pr-4 md:pr-20 text-xl md:text-5xl" href="#tournee">Tournées</a>
-    <a className="p-2 md:p-5" href="/">
-      <img className="w-20 md:size-40 mx-auto" src="/src/img/logo-aesop-rock-1.png" alt="" />
-    </a>
-    <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-2 md:p-5 pr-4 md:pr-20 text-xl md:text-5xl" href="#shop">Shop</a>
-    <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-2 md:p-5 pr-4 md:pr-20 text-xl md:text-5xl" href="#footer">Contact</a>
-  </nav>
-</header>
-
+        <header className="h-150">
+            <nav className="flex flex-wrap justify-center items-center font-spooky px-4 py-5 gap-3 md:gap-5">
+                <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-2 md:p-5 text-2xl md:text-5xl" href="#histoire">Histoire</a>
+                <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-2 md:p-5 text-2xl md:text-5xl" href="#tournee">Tournées</a>
+                <a className="p-2 md:p-5" href="/">
+                    <img className="w-24 md:size-40" src="/src/img/logo-aesop-rock-1.png" alt="" />
+                </a>
+                <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-2 md:p-5 text-2xl md:text-5xl" href="#shop">Shop</a>
+                <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-2 md:p-5 text-2xl md:text-5xl" href="#footer">Contact</a>
+                <a href="panier" className="drop-shadow-amber-400 p-2 md:p-5 text-2xl md:text-5xl">
+                    <FontAwesomeIcon icon={faShoppingCart} />
+                </a>
+            </nav>
+        </header>
 
 {/* section tournée */}
             <section className="tournee m-5 md:m-10 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover" id="tournee">
