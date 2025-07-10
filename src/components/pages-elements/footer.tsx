@@ -10,7 +10,7 @@ export default function Footer() {
     {/* Logo */}
     <div className="flex-shrink-0">
       <img
-        src="/src/img/filled-animation-logo/logo-remade.png"
+        src="/img/filled-animation-logo/logo-remade.png"
         alt="Aesop Rock Logo"
         className="w-40 md:w-52"
       />
@@ -24,7 +24,6 @@ export default function Footer() {
         <ul className="space-y-2 text-base">
           <li><a href="#soundtrack">Tracklist complète</a></li>
           <li><a href="#tournee">Dates</a></li>
-          <li><a href="#histoire">Histoire</a></li>
         </ul>
       </div>
 

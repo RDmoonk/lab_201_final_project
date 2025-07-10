@@ -1,6 +1,6 @@
 
 const AnimatedAesopRock = () => {
-  const imageUrl = '/src/img/filled-animation-logo/logo-remade.png';
+  const imageUrl = '/img/filled-animation-logo/logo-remade.png';
 
   return (
     <div className="relative h-screen bg-[url(/src/img/bg-logo-filled-anim.jpg)] bg-cover bg-center flex items-center justify-center">

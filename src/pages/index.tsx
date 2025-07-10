@@ -30,7 +30,7 @@ const IndexPage: React.FC = () => {
 
           <section className="artistStory px-5 sm:px-10 py-10" id="histoire">
             <h3 className="text-4xl sm:text-6xl md:text-8xl font-bold font-karantina-bold text-center sm:text-left">
-              Aesop Rock
+              AESOP ROCK
             </h3>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-5 p-5 sm:p-10">
               <div className="text-lg sm:text-xl leading-relaxed text-justify">
@@ -57,24 +57,20 @@ const IndexPage: React.FC = () => {
                   </p>
                 </div>
               </div>
-              <img className="w-full max-w-sm object-cover rounded-lg mx-auto" src="/src/img/aesop-rock-pic.jpg" alt="" />
+              <img className="w-full max-w-sm object-cover rounded-lg mx-auto" src="/img/aesop-rock-pic.jpg" alt="" />
             </div>
           </section>
 
           <section className="sountractSection px-5 sm:px-10" id="soundtrack">
             <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold text-center font-karantina-bold">
-              Soundtrack
+              SOUNDTRACK
             </h2>
-            <iframe src="/src/img/aesop-rock-video.mp4" className="aspect-video w-full rounded-xl my-5"></iframe>
-            <div className="flex flex-col items-center gap-5 my-10">
-              <img src="/src/img/logo-album-removebg-preview.png" alt="album logo" className="max-w-xs sm:max-w-md" />
-              <img src="/src/img/POCHETTE_TRANCHE (1).png" alt="songs" className="max-w-full rounded-xl" />
-            </div>
+            <iframe src="/img/aesop-rock-video.mp4" className="aspect-video w-full rounded-xl my-5"></iframe>
           </section>
 
           <section className="artistVinyle px-5 sm:px-10 m-10 pb-10">
             <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold m-5 p-5 font-karantina-bold text-center">
-              Vinyle
+              VINYLE
             </h2>
             <CarouselStyled />
             <div className="flex justify-center my-10">
@@ -86,7 +82,7 @@ const IndexPage: React.FC = () => {
 
           <section className="tournee m-5 sm:m-10 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover bg-center" id="tournee">
             <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold rotate-0 sm:rotate-3 p-5 font-karantina-bold text-center">
-              Tournée
+              TOURNEE
             </h2>
             <FrontEndTournee />
             <div className="flex justify-center my-10">
@@ -98,7 +94,7 @@ const IndexPage: React.FC = () => {
 
           <section className="px-5 sm:px-10" id="shop">
             <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold m-5 p-5 font-karantina-bold text-center">
-              Shop
+              SHOP
             </h2>
             <ShopCarousel />
             <div className="flex justify-center my-10">

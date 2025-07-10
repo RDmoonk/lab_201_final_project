@@ -13,10 +13,10 @@ export default function ShopCarousel() {
     // variable qui contient un tableau d'images pour le carousel
 
   const imagePaths= [
-    "/src/img/tshirt-logo-blue.jpeg",
-    "/src/img/tshirt-logo-cover.jpeg",
-    "/src/img/tshirt-logo-gray.jpeg",
-    "/src/img/tshirt-logo-green.jpeg"
+    "/img/tshirt-logo-blue.jpeg",
+    "/img/tshirt-logo-cover.jpeg",
+    "/img/tshirt-logo-gray.jpeg",
+    "/img/tshirt-logo-green.jpeg"
 
   ]
 

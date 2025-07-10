@@ -40,7 +40,7 @@ export default function TourneeList() {
 
       {/* IMAGE À GAUCHE */}
       <img
-        src="/src/img/aesop-rock-removebg-preview.png"
+        src="/img/aesop-rock-removebg-preview.png"
         alt="Aesop Rock"
         className="w-80 md:min-w-96 lg:w-[750px] object-contain"
       />
@@ -78,7 +78,7 @@ export default function TourneeList() {
 
   {date.soldout && (
     <span className="relative inline-block bg-red-600 text-black text-lg md:text-2xl font-bold px-6 py-2 border-4 border-red-800 rounded-lg font-spooky before:content-[''] after:content-[''] before:absolute after:absolute before:top-1/2 after:top-1/2 before:-translate-y-1/2 after:-translate-y-1/2 before:w-5 before:h-5 after:w-5 after:h-5 before:-left-3 after:-right-3 shadow-lg mt-2">
-      [Sold Out]
+      [SOLD OUT]
     </span>
   )}
 </div>

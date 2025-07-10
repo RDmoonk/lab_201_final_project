@@ -16,7 +16,7 @@ export default function Shop() {
                 <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-2 md:p-5 text-2xl md:text-5xl" href="#histoire">Histoire</a>
                 <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-2 md:p-5 text-2xl md:text-5xl" href="#tournee">Tournées</a>
                 <a className="p-2 md:p-5" href="/">
-                    <img className="w-24 md:size-40" src="/src/img/logo-aesop-rock-1.png" alt="" />
+                    <img className="w-24 md:size-40" src="img/logo-aesop-rock-1.png" alt="" />
                 </a>
                 <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-2 md:p-5 text-2xl md:text-5xl" href="#shop">Shop</a>
                 <a className="text-shadow-2xs text-shadow-amber-400 font-bold p-2 md:p-5 text-2xl md:text-5xl" href="#footer">Contact</a>
@@ -28,7 +28,7 @@ export default function Shop() {
 
 {/* section tournée */}
             <section className="tournee m-5 md:m-10 bg-[url(/src/img/backgroundTicket.jpeg)] bg-cover" id="tournee">
-                <h2 className="text-4xl md:text-8xl font-bold rotate-3 p-3 md:p-5 font-karantina-bold text-center">Tournée </h2>
+                <h2 className="text-4xl md:text-8xl font-bold rotate-3 p-3 md:p-5 font-karantina-bold text-center">TOURNEE </h2>
                 <TourneeList/>
             </section>
 
@@ -38,19 +38,19 @@ export default function Shop() {
 
 {/* section carousel pour les t-shirt */}
             <section className="" id="tshirt">
-                <h2 className="text-4xl md:text-8xl font-bold m-3 md:m-5 p-3 md:p-5 font-karantina-bold text-center">T-shirt</h2>
+                <h2 className="text-4xl md:text-8xl font-bold m-3 md:m-5 p-3 md:p-5 font-karantina-bold text-center">T-SHIRT</h2>
                 <ShopCarousel/>
             </section>
 
 {/* section carousel pour les sweats */}
             <section id="sweats">
-                <h2 className="text-4xl md:text-8xl font-bold m-3 md:m-5 p-3 md:p-5 font-karantina-bold text-center">Sweat</h2>
+                <h2 className="text-4xl md:text-8xl font-bold m-3 md:m-5 p-3 md:p-5 font-karantina-bold text-center">SWEAT</h2>
                 <ShopCarousel/>
             </section>
 
 {/* section carousel pour les vinyle */}
             <section className="artistVinyle m-5 md:m-10 pb-5 md:pb-10" id="vinyle">
-                <h2 className="text-4xl md:text-8xl font-bold m-3 md:m-5 p-3 md:p-5 font-karantina-bold text-center">Vinyle</h2>
+                <h2 className="text-4xl md:text-8xl font-bold m-3 md:m-5 p-3 md:p-5 font-karantina-bold text-center">VINYLE</h2>
                 <CarouselStyled />
             </section>
 {/* composant footer */}
