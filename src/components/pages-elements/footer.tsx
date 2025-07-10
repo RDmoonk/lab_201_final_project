@@ -10,12 +10,13 @@ export default function Footer() {
           <img
             src="/img/filled-animation-logo/logo-remade.png"
             alt="Aesop Rock Logo"
-            className="w-32 md:w-52"
+            className="w-100 md:w-72"
           />
         </div>
 
         {/* Sections */}
-        <div className="flex flex-col sm:flex-row flex-wrap gap-10 sm:gap-16 md:gap-24 w-full sm:w-auto">
+        <div className="flex flex-col items-center text-center sm:items-start sm:text-left sm:flex-row flex-wrap gap-10 sm:gap-16 md:gap-24 w-full sm:w-auto">
+
           {/* Tournée */}
           <div>
             <h3 className="font-bold text-xl md:text-2xl mb-4 sm:mb-6">TOURNÉE</h3>
